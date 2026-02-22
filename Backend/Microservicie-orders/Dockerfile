@@ -5,17 +5,17 @@ WORKDIR /src
 
 # Copiar archivos de proyecto y restaurar dependencias
 # Se hace por separado para aprovechar la caché de capas de Docker
-COPY ["Microservice.Api/Microservice.Api.csproj", "Microservice.Api/"]
-RUN dotnet restore "Microservice.Api/Microservice.Api.csproj"
+COPY ["Backend.Api/Backend.Api.csproj", "Backend.Api/"]
+RUN dotnet restore "Backend.Api/Backend.Api.csproj"
 
 # Copiar el resto del código y compilar
 COPY . .
-WORKDIR "/src/Microservice.Api"
-RUN dotnet build "Microservice.Api.csproj" -c Release -o /app/build
+WORKDIR "/src/Backend.Api"
+RUN dotnet build "Backend.Api.csproj" -c Release -o /app/build
 
 # --- Stage 2: Publish ---
 FROM build AS publish
-RUN dotnet publish "Microservice.Api.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "Backend.Api.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 # --- Stage 3: Final Runtime ---
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-jammy-chiseled AS final
@@ -28,4 +28,4 @@ COPY --from=publish /app/publish .
 EXPOSE 8080
 EXPOSE 8081
 
-ENTRYPOINT ["dotnet", "Microservice.Api.dll"]
+ENTRYPOINT ["dotnet", "Backend.Api.dll"]
