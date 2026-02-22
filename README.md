@@ -1,6 +1,7 @@
 # Company-ABC
 Prueba Técnica – Desarrollador Fullstack  
 Tecnologías: .NET 8/9, Angular 21, MongoDB / PostgreSQL, Docker, Docker Compose
+
 El objetivo del proyecto es demostrar la capacidad de diseñar una arquitectura escalable, mantenible y preparada para entornos productivos, aplicando buenas prácticas modernas de desarrollo Fullstack.
 
 ##  Diseño de Arquitectura Propuesto
@@ -21,7 +22,7 @@ La siguiente arquitectura representa el **diseño ideal planteado para la soluci
   - Control de acceso
 
  **Nota Importante:**  
-En la implementación actual de la prueba técnica **NO se incluye API Gateway**, y el frontend consume directamente los microservicios.
+En la implementación actual de la prueba técnica **NO se incluye API Gateway**, y el frontend consume apis publicas.
 
  **Capa de Servicios**
 - Microservicios desarrollados en .NET 8/9
@@ -80,7 +81,7 @@ Esto reduce acoplamiento a nivel de infraestructura.
 Lo que permite aplicar Clean Architecture correctamente.
 
 ---
-# 🔄 Integración con APIs Públicas
+#  Integración con APIs Públicas
 
 Se implementa consumo de APIs públicas:
 
@@ -119,28 +120,8 @@ Angular se integra fácilmente con APIs RESTful mediante los providers de HttpCl
 
 Aunque en la implementación de la prueba se utiliza MongoDB, la arquitectura ideal contempla PostgreSQL como motor principal por las siguientes razones:
 
-##  Motor robusto y empresarial
+PostgreSQL se considera una opción ideal para arquitecturas empresariales basadas en microservicios debido a su robustez, cumplimiento del estándar SQL y soporte completo de transacciones ACID, lo que garantiza integridad y consistencia de los datos. Además, se integra perfectamente con Entity Framework Core en .NET, permitiendo migraciones, modelado relacional y consultas tipadas mediante LINQ. Es un motor open source, altamente confiable y totalmente compatible con entornos Linux y Windows, así como con contenedores Docker, lo que lo convierte en una solución adecuada para despliegues en producción.
 
-PostgreSQL es:
-
-- Open Source
-- Altamente confiable
-- Compatible con estándares SQL
-- Utilizado ampliamente en entornos productivos
-
-##  Compatibilidad con Entity Framework Core
-
-PostgreSQL se integra perfectamente con:
-- Migraciones automáticas
-- Modelado relacional
-- Control de versiones de base de datos
-##  Soporte multiplataforma
-
-PostgreSQL es compatible con:
-- Linux
-- Windows
-- MacOS
-- Contenedores Docker
 ---
 
 #  Ejecución del Proyecto con Docker
