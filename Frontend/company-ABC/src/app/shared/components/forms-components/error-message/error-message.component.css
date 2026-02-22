@@ -1,4 +1,5 @@
-@import '../../../../assets/Styles/Constants/_colors.css';
+@import './../../../../../assets/Styles/Constants/_colors.css';
+
 
 .app-error {
   font-size: 12px;
