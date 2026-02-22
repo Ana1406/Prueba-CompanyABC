@@ -80,6 +80,16 @@ Esto reduce acoplamiento a nivel de infraestructura.
 Lo que permite aplicar Clean Architecture correctamente.
 
 ---
+# 🔄 Integración con APIs Públicas
+
+Se implementa consumo de APIs públicas:
+
+- https://jsonplaceholder.typicode.com
+- https://fakestoreapi.com
+
+El consumo se realiza desde la capa Core utilizando HttpClient.
+
+---
 
 ##  Frontend – Angular 21
 
@@ -188,3 +198,54 @@ Acceso a los servicios
 http://localhost:5001/health
 http://localhost:5001/status
 ```
+
+---
+#  Interfaz de Usuario – Frontend
+
+El frontend fue desarrollado en Angular 21, siguiendo arquitectura modular y principios de reutilización de componentes.Se debe de tener en cuenta que cuenta con un boton que permite cambiar el modo oscuro a claro y es diseño responsive.
+
+A continuación se presentan algunas vistas principales del sistema:
+
+---
+
+##  Pantalla de Login
+
+ <img src="docs/login-modo-claro.png" width="800" />
+ <img src="docs/login-modo-oscuro.png" width="800" />
+ <img src="docs/mensaje exitoso.png" width="800" />
+ 
+---
+
+##  Página Principal
+
+ <img src="docs/dashboard.png" width="800" />
+ 
+---
+##  Gestión de Usuarios
+ <img src="docs/usuarios.png" width="800" />
+
+---
+
+##  Gestión de Pedidos
+ <img src="docs/pedidos.png" width="800" />
+  <img src="docs/pedidos-responsive.png" width="800" />
+  
+---
+##  Gestión de Pagos
+ <img src="docs/pagos.png" width="800" />
+  <img src="docs/pagos-responsive.png" width="800" />
+   <img src="docs/detalle-pago.png" width="800" />
+  
+---
+
+### 🧩 Características del Frontend
+
+- Arquitectura basada en componentes
+- Uso de Reactive Forms
+- Validaciones personalizadas
+- Manejo de estado
+- Consumo de APIs REST
+- Manejo de roles: El manejo de roles se realiza de manera aletoria al momento de realizar el login se escoge de manera aleatoria si es Rol Admin o User.
+
+  El admin tiene acceso a todos los modulos, sin embargo el user solo tiene acceso a Pagos, Dashboard y Pedidos.
+- Diseño responsivo
