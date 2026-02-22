@@ -1,0 +1,13 @@
+@import './../assets/Styles/Constants/_colors.css';
+
+.background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.button-theme {
+    position: fixed;
+    top: 4px;
+    right: 7px;
+}

@@ -1,0 +1,51 @@
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\bin\Debug\net8.0\Backend.Core.deps.json
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\bin\Debug\net8.0\Backend.Core.dll
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\bin\Debug\net8.0\Backend.Core.pdb
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\bin\Debug\net8.0\Backend.Domain.dll
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\bin\Debug\net8.0\Backend.Domain.pdb
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\obj\Debug\net8.0\Backend.Core.csproj.AssemblyReference.cache
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\obj\Debug\net8.0\Backend.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\obj\Debug\net8.0\Backend.Core.AssemblyInfoInputs.cache
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\obj\Debug\net8.0\Backend.Core.AssemblyInfo.cs
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\obj\Debug\net8.0\Backend.Core.csproj.CoreCompileInputs.cache
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\obj\Debug\net8.0\Backend..C17EE414.Up2Date
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\obj\Debug\net8.0\Backend.Core.dll
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\obj\Debug\net8.0\refint\Backend.Core.dll
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\obj\Debug\net8.0\Backend.Core.pdb
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\obj\Debug\net8.0\ref\Backend.Core.dll
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\bin\Debug\net8.0\Backend.DataBase.dll
+C:\Users\AnaMariaRamirez\Documents\Personal\Cursos\.NET\Prueba Tecnica\Backend.Core\bin\Debug\net8.0\Backend.DataBase.pdb
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\obj\Debug\net8.0\Backend.Core.csproj.AssemblyReference.cache
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\obj\Debug\net8.0\Backend.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\obj\Debug\net8.0\Backend.Core.AssemblyInfoInputs.cache
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\obj\Debug\net8.0\Backend.Core.AssemblyInfo.cs
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\obj\Debug\net8.0\Backend.Core.csproj.CoreCompileInputs.cache
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\obj\Debug\net8.0\Backend.Core.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\obj\Debug\net8.0\refint\Backend.Core.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\obj\Debug\net8.0\Backend.Core.pdb
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\bin\Debug\net8.0\Backend.Core.deps.json
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\bin\Debug\net8.0\Backend.Core.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\bin\Debug\net8.0\Backend.Core.pdb
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\bin\Debug\net8.0\Backend.DataBase.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\bin\Debug\net8.0\Backend.Domain.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\bin\Debug\net8.0\Backend.DataBase.pdb
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\bin\Debug\net8.0\Backend.Domain.pdb
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\obj\Debug\net8.0\Backend..C17EE414.Up2Date
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-orders\Backend.Core\obj\Debug\net8.0\ref\Backend.Core.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\bin\Debug\net8.0\Backend.Core.deps.json
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\bin\Debug\net8.0\Backend.Core.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\bin\Debug\net8.0\Backend.Core.pdb
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\bin\Debug\net8.0\Backend.DataBase.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\bin\Debug\net8.0\Backend.Domain.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\bin\Debug\net8.0\Backend.DataBase.pdb
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\bin\Debug\net8.0\Backend.Domain.pdb
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\obj\Debug\net8.0\Backend.Core.csproj.AssemblyReference.cache
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\obj\Debug\net8.0\Backend.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\obj\Debug\net8.0\Backend.Core.AssemblyInfoInputs.cache
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\obj\Debug\net8.0\Backend.Core.AssemblyInfo.cs
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\obj\Debug\net8.0\Backend.Core.csproj.CoreCompileInputs.cache
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\obj\Debug\net8.0\Backend..C17EE414.Up2Date
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\obj\Debug\net8.0\Backend.Core.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\obj\Debug\net8.0\refint\Backend.Core.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\obj\Debug\net8.0\Backend.Core.pdb
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-users\Backend.Core\obj\Debug\net8.0\ref\Backend.Core.dll

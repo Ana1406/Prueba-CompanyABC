@@ -1,0 +1,43 @@
+<div class="login">
+    <div class="login__background">
+        <!-- Left Side - Branding -->
+        <div class="login__branding">
+            <div class="login__branding-content">
+                <h1 class="login__title">Company ABC</h1>
+                <p class="login__subtitle">Gestión Integral de Negocios</p>
+            </div>
+        </div>
+
+        <!-- Right Side - Form -->
+        <div class="login__form-section">
+            <div class="login__card">
+                <div class="login__header">
+                    <h2 class="login__header-title">Bienvenido</h2>
+                    <p class="login__header-subtitle">Ingresa con tu cuenta</p>
+                </div>
+                @if(loginSuccessSignal()){
+                <div class="login__success-alert">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <span>
+                        ¡Sesión iniciada correctamente!</span>
+                </div>
+                }
+                <form class="login__form" [formGroup]="loginForm">
+                    <app-custom-input formControlName="email" [form]="loginForm" [label]="emailLabelSignal" id="email"
+                        [type]="emailTypeSignal" placeholder="ejemplo@correo.com">
+                    </app-custom-input>
+
+                    <app-custom-input formControlName="password" [form]="loginForm" [label]="passwordLabelSignal"
+                        id="password" [type]="passwordTypeSignal" placeholder="Ingresa tu contraseña">
+                    </app-custom-input>
+
+                    <div class="login__actions">
+                        <app-custom-button [text]="buttonTextSignal()" [disabled]="isLoadingSignal()||loginForm.invalid"
+                            (click)="handleLogin()">
+                        </app-custom-button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

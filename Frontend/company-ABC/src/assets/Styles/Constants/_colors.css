@@ -1,0 +1,73 @@
+:root {
+    --color-white: #ffffff;
+    --color-grayish-white: #eaecef;
+    --color-gray-light: #aeaeae;
+    --color-gray: #beb7b0;
+    --color-yellow: #F9D9AC;
+    --color-orange: #FCA483;
+
+    --color-red: #F18886;
+    --color-green: #BAD3C6;
+    --color-brown: #7b7066;
+    --color-black: #000000;
+    --color-black-dark: #1e1e1e;
+
+    --color-white-alpha25: #ffffff40;
+
+    --color-brown-alpha25: var(--color-brown)40;
+    --color-brown-alpha80: var(--color-brown)80;
+    --color-brown-alpha75: var(--color-brown)C0;
+
+    --color-gray-dark: #5f5c5c;
+    --color-gray-dark-ligther: #7e7b7b;
+    --color-graysh-dark: #363535;
+
+    --button-theme: var(--color-grayish-white);
+    --bg-app: var(--color-grayish-white);
+    --bg-card-login: var(--color-green);
+    --text-main: var(--color-black);
+    --input-border: var(--color-brown);
+    --input-bg: var(--color-white);
+    --input-text: var(--color-black);
+    --btn-primary-bg: var(--color-orange);
+    --btn-primary-text: var(--color-white);
+    --btn-primary-hover: var(--color-red);
+    --subtitle-color: var(--color-black);
+
+    --color-sidebar-bg: var(--color-green);
+    --color-sidebar-text: var(--color-black);
+    --color-sidebar-menu: var(--color-orange);
+
+    --color-card-dashboard-bg: var(--color-yellow);
+
+    --color-table: var(--color-white);
+    --color-table-text: var(--color-black);
+}
+
+[data-theme='dark'] {
+    --bg-app: var(--color-gray-dark);
+    --text-main: var(--color-white);
+    --input-border: var(--color-brown);
+    --input-bg: var(--color-white-alpha25);
+    --input-text: var(--color-white);
+    --btn-primary-bg: var(--color-orange);
+    --btn-primary-text: var(--color-black);
+    --btn-primary-hover: var(--color-red);
+    --subtitle-color: var(--color-gray-light);
+
+    --button-theme: var(--color-gray-dark);
+    --color-sidebar-bg: var(--color-graysh-dark);
+    --color-sidebar-text: var(--color-white);
+    --color-sidebar-menu: var(--color-yellow);
+    --color-sidebar-header-gradient: linear-gradient(135deg, var(--color-graysh-dark) 0%, #2a2a2a 100%);
+    --color-sidebar-scroll-thumb: var(--color-yellow);
+    --color-sidebar-scroll-thumb-hover: var(--color-orange);
+    --color-sidebar-floating-btn-bg: var(--color-yellow);
+    --color-sidebar-floating-btn-text: var(--color-black);
+    --color-sidebar-floating-btn-shadow: rgba(249, 217, 172, 0.3);
+
+    --color-card-dashboard-bg: var(--color-orange);
+
+    --color-table: var(--color-gray-dark-ligther);
+    --color-table-text: var(--color-white);
+}

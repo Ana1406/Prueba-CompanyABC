@@ -1,0 +1,38 @@
+<div class="sidebar" [class.sidebar--open]="isSidebarOpen">
+    <div class="sidebar__header">
+        <h2 class="sidebar__title">Company ABC</h2>
+        <button class="sidebar__toggle" (click)="toggleSidebar()"
+            [attr.aria-label]="isSidebarOpen ? 'Cerrar menú' : 'Abrir menú'">
+            <i [ngClass]="isSidebarOpen ? 'fa-solid fa-times' : 'fa-solid fa-bars'"></i>
+        </button>
+    </div>
+
+    <nav class="sidebar__nav">
+        <ul class="sidebar__menu">
+            @for(item of menuItems; track item.route){
+            <li class="sidebar__menu-item">
+                <a [routerLink]="item.route" routerLinkActive="sidebar__link--active"
+                    [routerLinkActiveOptions]="{ exact: true }" class="sidebar__link">
+                    <i [class]="item.icon"></i>
+                    @if(isSidebarOpen){
+                    <span class="sidebar__label">{{ item.label }}</span>}
+                </a>
+            </li>
+            }
+        </ul>
+    </nav>
+    @if(isSidebarOpen){
+    <div class="sidebar__footer">
+        <app-custom-button text="Cerrar Sesión" color="primary" (click)="logout()"></app-custom-button>
+
+        <p class="sidebar__version">v1.0.0</p>
+    </div>
+    }
+</div>
+
+<div class="sidebar__overlay" [class.sidebar__overlay--active]="isSidebarOpen" (click)="toggleSidebar()"></div>
+@if(!isSidebarOpen){
+<button class="sidebar__floating-btn" (click)="toggleSidebar()" [attr.aria-label]="'Abrir menú'">
+    <i class="fa-solid fa-bars"></i>
+</button>
+}

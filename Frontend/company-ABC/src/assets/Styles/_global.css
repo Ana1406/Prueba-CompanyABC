@@ -1,0 +1,18 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+/*** Global styles for the application
+*/
+
+@import './layout/_background.css';
+@import './layout/_cards.css';
+@import './layout/_table.css';
+@import './layout/_texts.css';
+
+app-root {
+    display: block;
+    width: 100vw;
+}
+
+body {
+    margin: 0px;
+}

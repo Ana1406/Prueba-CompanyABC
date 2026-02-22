@@ -1,0 +1,57 @@
+<div class="table">
+    <header class="table__header">
+        <div>
+            <h2 class="table__title">Tabla de usuarios</h2>
+            <p class="table__subtitle">Lista de usuarios registrados en la aplicación</p>
+        </div>
+    </header>
+
+    <section class="table__container">
+        <div class="table__table-wrap">
+            @if(userList && userList.length){
+            <table class="table__table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Telefono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(user of userList; track user.id; let i = $index){
+                    <tr>
+                        <td>{{ i + 1 }}</td>
+                        <td> <span class="bold">{{ user.name }}</span></td>
+                        <td>{{ user.email }}</td>
+                        <td>{{user.phone | phone}}
+
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+            }
+            @else{
+            <div class="table__empty">
+                No hay usuarios para mostrar.
+            </div>
+            }
+
+        </div>
+
+        <!-- Cards para pantallas pequeñas -->
+        <div class="cards">
+            @for(user of userList; track user.id){
+            <article class="card">
+                <div class="card__row">
+                    <span class="bold">{{ user.name }}</span>
+                </div>
+                <div class="card__row card__email">{{ user.email }}</div>
+                <div class="card__row card__phone">{{ user.phone | phone }}</div>
+
+            </article>
+            }
+        </div>
+    </section>
+</div>

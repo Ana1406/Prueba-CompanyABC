@@ -1,0 +1,36 @@
+@import './../../../../../assets/Styles/Constants/_colors.css';
+
+
+.custom-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.custom-input__label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-main);
+    transition: color 0.3s ease;
+}
+
+.custom-input__field {
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    height: 45px;
+    padding: 0 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.custom-input__field:focus {
+    border-color: var(--color-orange);
+    outline: none;
+    box-shadow: 0 0 8px rgba(252, 164, 131, 0.3);
+}
+
+.custom-input__field::placeholder {
+    color: var(--color-gray-light);
+}

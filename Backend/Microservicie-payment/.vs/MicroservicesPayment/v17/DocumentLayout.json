@@ -1,0 +1,229 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.database\\repositories\\paymentrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|solutionrelative:backend.database\\repositories\\paymentrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.database\\interfaces\\ipaymentrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|solutionrelative:backend.database\\interfaces\\ipaymentrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96EC218E-C082-44DE-9B57-BEBD86BE50CE}|Backend.Domain\\Backend.Domain.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.domain\\response\\paymentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96EC218E-C082-44DE-9B57-BEBD86BE50CE}|Backend.Domain\\Backend.Domain.csproj|solutionrelative:backend.domain\\response\\paymentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|solutionrelative:backend.api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.core\\core\\paymentcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|solutionrelative:backend.core\\core\\paymentcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96EC218E-C082-44DE-9B57-BEBD86BE50CE}|Backend.Domain\\Backend.Domain.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.domain\\enums\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96EC218E-C082-44DE-9B57-BEBD86BE50CE}|Backend.Domain\\Backend.Domain.csproj|solutionrelative:backend.domain\\enums\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.core\\core\\healthcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|solutionrelative:backend.core\\core\\healthcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.database\\database\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|solutionrelative:backend.database\\database\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96EC218E-C082-44DE-9B57-BEBD86BE50CE}|Backend.Domain\\Backend.Domain.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.domain\\request\\paymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96EC218E-C082-44DE-9B57-BEBD86BE50CE}|Backend.Domain\\Backend.Domain.csproj|solutionrelative:backend.domain\\request\\paymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|solutionrelative:backend.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|solutionrelative:backend.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.database\\models\\paymentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|solutionrelative:backend.database\\models\\paymentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservicie-payment\\backend.api\\backend.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|solutionrelative:backend.api\\backend.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HealthCore.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Core\\Core\\HealthCore.cs",
+              "RelativeDocumentMoniker": "Backend.Core\\Core\\HealthCore.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Core\\Core\\HealthCore.cs",
+              "RelativeToolTip": "Backend.Core\\Core\\HealthCore.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAYwGAAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T21:35:10.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Domain\\Enums\\Enums.cs",
+              "RelativeDocumentMoniker": "Backend.Domain\\Enums\\Enums.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Domain\\Enums\\Enums.cs",
+              "RelativeToolTip": "Backend.Domain\\Enums\\Enums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T20:46:34.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Api\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "Backend.Api\\Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Api\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "Backend.Api\\Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T18:55:08.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PaymentModel.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.DataBase\\Models\\PaymentModel.cs",
+              "RelativeDocumentMoniker": "Backend.DataBase\\Models\\PaymentModel.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.DataBase\\Models\\PaymentModel.cs",
+              "RelativeToolTip": "Backend.DataBase\\Models\\PaymentModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T19:07:38.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DbContext.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.DataBase\\DataBase\\DbContext.cs",
+              "RelativeDocumentMoniker": "Backend.DataBase\\DataBase\\DbContext.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.DataBase\\DataBase\\DbContext.cs",
+              "RelativeToolTip": "Backend.DataBase\\DataBase\\DbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T19:06:18.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PaymentCore.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Core\\Core\\PaymentCore.cs",
+              "RelativeDocumentMoniker": "Backend.Core\\Core\\PaymentCore.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Core\\Core\\PaymentCore.cs",
+              "RelativeToolTip": "Backend.Core\\Core\\PaymentCore.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAgwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T19:00:30.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Backend.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Api\\Program.cs",
+              "RelativeToolTip": "Backend.Api\\Program.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAcwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T19:00:07.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "Backend.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Api\\appsettings.json",
+              "RelativeToolTip": "Backend.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-21T18:54:29.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PaymentRequest.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Domain\\Request\\PaymentRequest.cs",
+              "RelativeDocumentMoniker": "Backend.Domain\\Request\\PaymentRequest.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Domain\\Request\\PaymentRequest.cs",
+              "RelativeToolTip": "Backend.Domain\\Request\\PaymentRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T19:15:04.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IPaymentRepositorie.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.DataBase\\Interfaces\\IPaymentRepositorie.cs",
+              "RelativeDocumentMoniker": "Backend.DataBase\\Interfaces\\IPaymentRepositorie.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.DataBase\\Interfaces\\IPaymentRepositorie.cs",
+              "RelativeToolTip": "Backend.DataBase\\Interfaces\\IPaymentRepositorie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T19:07:03.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaymentRepositorie.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.DataBase\\Repositories\\PaymentRepositorie.cs",
+              "RelativeDocumentMoniker": "Backend.DataBase\\Repositories\\PaymentRepositorie.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.DataBase\\Repositories\\PaymentRepositorie.cs",
+              "RelativeToolTip": "Backend.DataBase\\Repositories\\PaymentRepositorie.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T19:11:37.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PaymentResponse.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Domain\\Response\\PaymentResponse.cs",
+              "RelativeDocumentMoniker": "Backend.Domain\\Response\\PaymentResponse.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Domain\\Response\\PaymentResponse.cs",
+              "RelativeToolTip": "Backend.Domain\\Response\\PaymentResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T20:20:55.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Backend.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Api\\Backend.Api.csproj",
+              "RelativeDocumentMoniker": "Backend.Api\\Backend.Api.csproj",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservicie-payment\\Backend.Api\\Backend.Api.csproj",
+              "RelativeToolTip": "Backend.Api\\Backend.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-21T18:54:18.768Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

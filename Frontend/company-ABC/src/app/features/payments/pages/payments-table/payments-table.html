@@ -1,0 +1,32 @@
+<div class="payments-table">
+    <header class="payments-table__header">
+        <h2>Pagos</h2>
+    </header>
+
+    <section class="payments-table__container">
+        @if(paymentsList && paymentsList.length){
+        <div>
+            <ul class="payments-list">
+                @for(p of paymentsList; track p.id){
+                <li class="payment-item ">
+                    <div class="payment-info">
+                        <div class="payment-title">{{ p.title }}</div>
+                        <div class="payment-price">Precio: {{ p.price |currency }}</div>
+                    </div>
+                    <div>
+                        <app-custom-button text="Ver imagen" color="primary" (click)="openImage(p)"></app-custom-button>
+                    </div>
+                </li>
+                }
+            </ul>
+        </div>
+        } @else{
+        <ng-template #empty>
+            <div>No hay pagos para mostrar.</div>
+        </ng-template>
+        }
+    </section>
+
+    <app-modal-comment [isOpen]="isModalOpen" [payload]="selectedPaymentSignal" [variant]="modalVariant"
+        (close)="closeModal()"></app-modal-comment>
+</div>

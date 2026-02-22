@@ -1,0 +1,41 @@
+﻿using Backend.Core.Core.Interfaces;
+using Backend.Domain.Models;
+using Backend.Domain.Response;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Backend.Api.Controllers
+{
+    [Route("api/[controller]/[action]")]
+    [ApiController]
+    public class PaymentsController : ControllerBase
+    {
+        public readonly IPaymentCore _paymentCore;
+        public PaymentsController(IPaymentCore paymentCore)
+        {
+            _paymentCore=paymentCore;
+        }
+
+        /// <summary>
+        /// GetAllPayment
+        /// </summary>
+        /// <returns>List<PaymentResponse></returns>
+        [HttpGet]
+        public async Task<ActionResult<GeneralResponse>> GetAllPayment()
+        {
+
+            return Ok(await _paymentCore.GetAllPayments());
+        }
+
+        /// <summary>
+        /// CreatePayment
+        /// </summary>
+        /// <param name="payment">PaymentRequest</param>
+        /// <returns>bool</returns>
+        [HttpPost]
+        public async Task<ActionResult<GeneralResponse>> CreatePayment(PaymentRequest payment)
+        {
+
+            return Ok(await _paymentCore.CreatePayment(payment));
+        }
+    }
+}

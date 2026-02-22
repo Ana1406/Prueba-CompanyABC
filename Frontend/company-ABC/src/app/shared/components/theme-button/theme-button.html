@@ -1,0 +1,4 @@
+<button class="theme-btn" (click)="toggleTheme()" [title]="isDarkMode ? 'Modo Claro' : 'Modo Oscuro'">
+    <i [class]="isDarkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"></i>
+    <span class="text">{{ isDarkMode ? 'Modo Claro' : 'Modo Oscuro' }}</span>
+</button>

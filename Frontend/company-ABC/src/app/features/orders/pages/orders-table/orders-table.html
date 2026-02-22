@@ -1,0 +1,66 @@
+<div class="table">
+    <header class="table__header">
+        <div>
+            <h2 class="table__title">Lista de órdenes</h2>
+            <p class="table__subtitle">Revisa los pedidos y abre comentarios</p>
+        </div>
+    </header>
+
+    <section class="table__container">
+        <div class="table__table-wrap">
+            @if(orders && orders.length){
+            <table class="table__table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for( o of orders;track o.id){
+                    <tr>
+                        <td>{{ o.id }}</td>
+                        <td>{{ o.name }}</td>
+                        <td>{{ o.email }}</td>
+                        <td>
+                            <app-custom-button text="Detalle" color="secondary"
+                                (click)="openComment(o)"></app-custom-button>
+                        </td>
+                    </tr>
+                    }
+
+                </tbody>
+            </table>
+            }@else{
+            <div class="table__empty">No hay órdenes para mostrar.</div>
+            }
+
+
+        </div>
+
+        <div class="cards">
+            @for(o of orders; track o.id){
+            <article class="card">
+                <div class="card__row">
+                    <div>
+                        <div class="card__id">#{{ o.id }}</div>
+                        <div class="card__name">{{ o.name }}</div>
+                        <div class="card__email">{{ o.email }}</div>
+                    </div>
+                    <div>
+                        <app-custom-button text="Detalle" color="secondary"
+                            (click)="openComment(o)"></app-custom-button>
+                    </div>
+                </div>
+            </article>
+            }
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <app-modal-comment [isOpen]="isModalOpen" [payload]="selectedOrderSignal" [variant]="modalVariant"
+        (close)="closeModal()"></app-modal-comment>
+
+</div>

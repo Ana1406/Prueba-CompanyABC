@@ -1,0 +1,8 @@
+<div class="custom-input">
+    @if(labelSignal()){
+    <label class="custom-input__label">{{ labelSignal() }}</label>
+    }
+    <input [type]="typeSignal()" [value]="inputValue" (input)="onInputChange($event)" (blur)="onInputBlur()"
+        [placeholder]="placeholder" [id]="id" class="custom-input__field">
+    <app-err-msg [formGroup]="form()" [field]="formControlName()"></app-err-msg>
+</div>

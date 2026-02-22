@@ -1,0 +1,8 @@
+@import './../Constants/_colors.css';
+@import './../Constants/_fonts.css';
+
+.background-login {
+    background-color: var(--bg-app);
+    width: 100vw;
+    height: 100vh;
+}
