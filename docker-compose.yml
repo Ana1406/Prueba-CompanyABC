@@ -33,7 +33,7 @@ services:
   # -----------------------
   payments-api:
     build:
-      context: ./backend/Microservice-payments
+      context: ./backend/Microservice-payment
       dockerfile: Dockerfile
     container_name: payments-api
     restart: always
