@@ -193,7 +193,7 @@ A continuación se presentan algunas vistas principales del sistema:
 
  <img src="docs/login-modo-claro.png" width="800" />
  <img src="docs/login-modo-oscuro.png" width="800" />
- <img src="docs/mensaje exitoso.png" width="800" />
+ <img src="docs/mensaje-exitoso.png" width="800" />
  
 ---
 
