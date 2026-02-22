@@ -61,7 +61,7 @@ services:
   # -----------------------
   frontend:
     build:
-      context: ./frontend
+      context: ./Frontend/company-ABC
       dockerfile: Dockerfile
     container_name: frontend-app
     restart: always
