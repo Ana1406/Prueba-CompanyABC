@@ -1,0 +1,73 @@
+
+
+services:
+
+  # -----------------------
+  # MongoDB
+  # -----------------------
+  mongo:
+    image: mongo:7
+    container_name: mongo-db
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  # -----------------------
+  # Users Microservice
+  # -----------------------
+  users-api:
+    build:
+      context: ./backend/Microservice-users
+      dockerfile: Dockerfile
+    container_name: users-api
+    restart: always
+    ports:
+      - "5001:8080"
+    depends_on:
+      - mongo
+
+ # -----------------------
+  # Payments Microservice
+  # -----------------------
+  users-api:
+    build:
+      context: ./backend/Microservice-users
+      dockerfile: Dockerfile
+    container_name: users-api
+    restart: always
+    ports:
+      - "5002:8080"
+    depends_on:
+      - mongo
+
+  # -----------------------
+  # Orders Microservice
+  # -----------------------
+  orders-api:
+    build:
+      context: ./backend/Microservice-orders
+      dockerfile: Dockerfile
+    container_name: orders-api
+    restart: always
+    ports:
+      - "5003:8080"
+    depends_on:
+      - mongo
+
+  # -----------------------
+  # Frontend Angular
+  # -----------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend-app
+    restart: always
+    ports:
+      - "4200:80"
+
+
+volumes:
+  mongo_data:
