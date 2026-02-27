@@ -22,8 +22,8 @@ namespace Backend.Api.Controllers
         /// <returns>List<UserResponse></returns>
         [HttpGet]
         public async Task<ActionResult<GeneralResponse>> GetAllUsers([FromQuery] string? email,
-    [FromQuery] int page = 1,
-    [FromQuery] int pageSize = 10)
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 10)
         {
             FilterUsersRequest filter = new FilterUsersRequest()
             {
@@ -41,6 +41,26 @@ namespace Backend.Api.Controllers
                 return BadRequest(result);
             }
             
+        }
+
+        /// <summary>
+        /// Get userId by email
+        /// </summary>
+        /// <returns><UserDto> </returns>
+        [HttpGet]
+        public async Task<ActionResult<GeneralResponse>> GetUserIdByEmail([FromQuery] string? email)
+        {
+           
+            var result = await _userCore.GetUserIdByEmail(email);
+            if (result.Status == (int)ServiceStatusCode.Success)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return BadRequest(result);
+            }
+
         }
 
         /// <summary>

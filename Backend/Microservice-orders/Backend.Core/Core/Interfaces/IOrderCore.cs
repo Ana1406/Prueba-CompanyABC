@@ -16,10 +16,16 @@ namespace Backend.Core.Core.Interfaces
         Task<GeneralResponse> GetAllOrders();
 
         /// <summary>
-        /// CreateOrder
+        /// UpsertOrder
         /// </summary>
         /// <param name="userIn">OrderRequest</param>
-        Task<GeneralResponse> CreateOrder(OrderRequest order);
+        Task<GeneralResponse> UpsertOrder(OrderRequest order);
+
+        /// <summary>
+        /// DeleteOrder
+        /// </summary>
+        /// <param name="orderID">OrderRequest</param>
+        Task<GeneralResponse> DeleteOrder(string orderID);
 
     }
 }

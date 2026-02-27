@@ -93,7 +93,7 @@
         }
       }
     },
-    "/api/Orders/CreateOrder": {
+    "/api/Orders/UpsertOrder": {
       "post": {
         "tags": [
           "Orders"
@@ -117,6 +117,44 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneralResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneralResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneralResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Orders/DeleteOrder": {
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -164,6 +202,14 @@
       "OrderRequest": {
         "type": "object",
         "properties": {
+          "idUser": {
+            "type": "string",
+            "nullable": true
+          },
+          "idOrder": {
+            "type": "string",
+            "nullable": true
+          },
           "nameApplicant": {
             "type": "string",
             "nullable": true

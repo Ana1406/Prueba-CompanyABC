@@ -1,16 +1,16 @@
 [
   {
     "ContainingType": "Backend.Api.Controllers.OrdersController",
-    "Method": "CreateOrder",
-    "RelativePath": "api/Orders/CreateOrder",
+    "Method": "DeleteOrder",
+    "RelativePath": "api/Orders/DeleteOrder",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "order",
-        "Type": "Backend.Domain.Models.OrderRequest",
-        "IsRequired": true
+        "Name": "orderId",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -33,6 +33,32 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Backend.Domain.Response.GeneralResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Api.Controllers.OrdersController",
+    "Method": "UpsertOrder",
+    "RelativePath": "api/Orders/UpsertOrder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "Backend.Domain.Models.OrderRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "Backend.Domain.Response.GeneralResponse",

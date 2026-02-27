@@ -16,6 +16,7 @@ namespace Backend.Core.Core
         {
             _UserRepositorie = userRepositorie;
         }
+
         #region Get all users
         /// <summary>
         /// Get user complete list
@@ -51,15 +52,11 @@ namespace Backend.Core.Core
 
             if (user == null)
             {
-               var userDb = _UserRepositorie.CreateAsync(new UserRequest()
-                {
-                  Name = userIn.Name,
-                  EmailIn = userIn.EmailIn,
-                 });
+               var userDb = await _UserRepositorie.CreateAsync(userIn);
 
                oReturn.Data = true;
                oReturn.Status = (int)ServiceStatusCode.Success;
-               oReturn.Message = "El usuario se creo exitosamente en el sistema.";
+               oReturn.Message = $"El usuario se creo exitosamente en el sistema, con el id {userDb}";
             }
             else
             {
@@ -71,5 +68,30 @@ namespace Backend.Core.Core
         }
         #endregion
 
+        #region Get userId by email
+        /// <summary>
+        /// Get userId by email
+        /// </summary>
+        /// <returns>List<UserDto> </returns>
+        public async Task<GeneralResponse> GetUserIdByEmail(string email)
+        {
+            var oReturn = new GeneralResponse();
+
+            var user = await _UserRepositorie.GetUserByEmailAsync(email);
+
+            if (user == null)
+            {
+                oReturn.Data = null;
+                oReturn.Message = $" No se encontro para el email {email} el correspondiente id en el sistema";
+                oReturn.Status = (int)ServiceStatusCode.ValidationError;
+            }
+
+            oReturn.Data = user.Id;
+            oReturn.Message = $"Se encontro para el email {email} el correspondiente id en el sistema";
+            oReturn.Status = (int)ServiceStatusCode.Success;
+
+            return oReturn;
+        }
+        #endregion
     }
 }

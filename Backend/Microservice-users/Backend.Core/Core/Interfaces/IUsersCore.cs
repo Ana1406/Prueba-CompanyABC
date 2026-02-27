@@ -21,5 +21,11 @@ namespace Backend.Core.Core.Interfaces
         /// <param name="userIn">UserRequest</param>
         Task<GeneralResponse> CreateUser(UserRequest userIn);
 
+        /// <summary>
+        /// Get userId by email
+        /// </summary>
+        /// <returns><UserDto> </returns>
+        Task<GeneralResponse> GetUserIdByEmail(string email);
+
     }
 }

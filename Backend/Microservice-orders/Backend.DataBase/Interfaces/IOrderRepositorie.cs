@@ -8,8 +8,10 @@ namespace Backend.DataBase.Repositories
     public interface IOrderRepositorie
     {
         Task<List<ProductResponse>> GetAllAsync();
-        Task CreateAsync(OrderRequest user);
-        Task<OrderModel> GetOrderByEmailAsync(string email);
+        Task<string> CreateAsync(OrderRequest user);
+        Task<string> UpdateAsync(OrderRequest user);
+        Task<OrderModel> GetOrderByIdAsync(string idUser);
+        Task<string> DisabledOrderByIdAsync(string orderId);
 
     }
  

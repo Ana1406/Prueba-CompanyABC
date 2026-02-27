@@ -32,10 +32,22 @@ namespace Backend.Api.Controllers
         /// <param name="order">OrderRequest</param>
         /// <returns>bool</returns>
         [HttpPost]
-        public async Task<ActionResult<GeneralResponse>> CreateOrder(OrderRequest order)
+        public async Task<ActionResult<GeneralResponse>> UpsertOrder([FromBody] OrderRequest order)
         {
 
-            return Ok(await _orderCore.CreateOrder(order));
+            return Ok(await _orderCore.UpsertOrder(order));
+        }
+
+        /// <summary>
+        /// DeleteOrder
+        /// </summary>
+        /// <param name="order">OrderId</param>
+        /// <returns>bool</returns>
+        [HttpPost]
+        public async Task<ActionResult<GeneralResponse>> DeleteOrder([FromBody] string orderId)
+        {
+
+            return Ok(await _orderCore.DeleteOrder(orderId));
         }
     }
 }

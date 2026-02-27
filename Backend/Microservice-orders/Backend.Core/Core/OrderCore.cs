@@ -41,33 +41,64 @@ namespace Backend.Core.Core
         /// </summary>
         /// <param name="input">OrderRequest</param>
         /// <returns>bool</returns>
-        public async Task<GeneralResponse> CreateOrder(OrderRequest order)
+        public async Task<GeneralResponse> UpsertOrder(OrderRequest orderIn)
         {
             var oReturn = new GeneralResponse();
 
-                var users = new List<OrderModel>();
+                var order = await _OrderRepositorie.GetOrderByIdAsync(orderIn.IdUser);
 
-                var user = await _OrderRepositorie.GetOrderByEmailAsync(order.EmailApplicant);
-
-                if (user == null)
+                if (order == null)
                 {
-                    var userDb = _OrderRepositorie.CreateAsync(new OrderRequest()
+                    var orderDb = _OrderRepositorie.CreateAsync(new OrderRequest()
                     {
-                        NameApplicant = order.NameApplicant,
-                        EmailApplicant = order.EmailApplicant,
-                        Products = order.Products,
+                        IdUser = orderIn.IdUser,
+                        NameApplicant = orderIn.NameApplicant,
+                        EmailApplicant = orderIn.EmailApplicant,
+                        Products = orderIn.Products,
                     });
 
-                    oReturn.Data = true;
+                    oReturn.Data = orderDb;
                     oReturn.Status = (int)ServiceStatusCode.Success;
-                    oReturn.Message = "El pedido se creo exitosamente en el sistema.";
+                    oReturn.Message = $"El pedido se creo exitosamente en el sistema bajo el id {orderDb}.";
                 }
                 else
                 {
-                    oReturn.Message = "El pedido ya se encuentra registrado en el sistema.";
-                    oReturn.Data = false;
-                    oReturn.Status = (int)ServiceStatusCode.ValidationError;
-                }
+                //Logica para revisar estado de pago en microservicio de pago
+
+                var userDb = _OrderRepositorie.UpdateAsync(new OrderRequest()
+                {
+                    NameApplicant = order.NameApplicant,
+                    EmailApplicant = order.EmailApplicant,
+                    Products = order.Products,
+                });
+
+                oReturn.Data = true;
+                oReturn.Status = (int)ServiceStatusCode.Success;
+                oReturn.Message = "El pedido se edito exitosamente en el sistema.";
+            }
+
+
+            return oReturn;
+        }
+        #endregion
+
+        #region Create Order
+        /// <summary>
+        /// Delete Order
+        /// </summary>
+        /// <param name="input">OrderRequest</param>
+        /// <returns>bool</returns>
+        public async Task<GeneralResponse> DeleteOrder(string orderId)
+        {
+            var oReturn = new GeneralResponse();
+
+            var order = await _OrderRepositorie.DisabledOrderByIdAsync(orderId);
+
+                oReturn.Data = order;
+                oReturn.Status = (int)ServiceStatusCode.Success;
+                oReturn.Message = $"El pedido se elimino exitosamente en el sistema.";
+            
+          
 
 
             return oReturn;

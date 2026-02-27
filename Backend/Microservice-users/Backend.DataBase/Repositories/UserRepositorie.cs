@@ -43,7 +43,7 @@ namespace Backend.DataBase.Repositories
 
         }
 
-        public async Task CreateAsync(UserRequest user)
+        public async Task<string> CreateAsync(UserRequest user)
         {
             var userModel = new UserModel()
             {
@@ -51,7 +51,9 @@ namespace Backend.DataBase.Repositories
                 Email = user.EmailIn,
                 CreatedDate = DateTime.Now,
             };
+
             await _collection.InsertOneAsync(userModel);
+            return userModel.Id;
         }
 
         public async Task<UserModel> GetUserByEmailAsync(string email)
