@@ -25,19 +25,11 @@ namespace Backend.Core.Core
         {
             var oReturn = new GeneralResponse();
 
-            try
-            {
                 var usersList = await _PaymentRepositorie.GetAllAsync();
 
                 oReturn.Data = usersList;
                 oReturn.Status = (int)ServiceStatusCode.Success;
                 oReturn.Message = $"Se encontraron {usersList.Count} registros de pagos en el sistema.";
-            }
-            catch (Exception ex)
-            {
-                oReturn.Message = "Error obteniendo los pagos registrados en el sistema";
-                oReturn.Status = (int)ServiceStatusCode.ValidationError;
-            }
 
             return oReturn;
         }
@@ -53,9 +45,6 @@ namespace Backend.Core.Core
         {
             var oReturn = new GeneralResponse();
 
-            try
-            {
-
                     var paymentDb = _PaymentRepositorie.CreateAsync(new PaymentRequest()
                     {
                         NameOwner = payment.NameOwner,
@@ -67,14 +56,6 @@ namespace Backend.Core.Core
                 oReturn.Data = true;
                 oReturn.Status = (int)ServiceStatusCode.Success;
                 oReturn.Message = "El pago se realizo exitosamente en el sistema.";
-
-            }
-            catch (Exception ex)
-            {
-                oReturn.Message = "Error procesando pago en el sistema.";
-                oReturn.Data = false;
-                oReturn.Status = (int)ServiceStatusCode.InternalError;
-            }
 
             return oReturn;
         }

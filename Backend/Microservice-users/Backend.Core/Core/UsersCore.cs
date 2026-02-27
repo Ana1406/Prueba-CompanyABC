@@ -25,20 +25,12 @@ namespace Backend.Core.Core
         {
             var oReturn = new GeneralResponse();
 
-            try
-            {
-                var usersList = await  _UserRepositorie.GetAllAsync( input);
+            var usersList = await  _UserRepositorie.GetAllAsync( input);
 
 
-                oReturn.Data = usersList;
-                oReturn.Message = $"Se encontraron {usersList.Count} registros de usuarios en el sistema.";
-                oReturn.Status = (int)ServiceStatusCode.Success;
-            }
-            catch (Exception ex)
-            {
-                oReturn.Message = "Error obteniendo los usuarios registrados en el sistema";
-                oReturn.Status = (int)ServiceStatusCode.ValidationError;
-            }
+            oReturn.Data = usersList;
+            oReturn.Message = $"Se encontraron {usersList.Count} registros de usuarios en el sistema.";
+            oReturn.Status = (int)ServiceStatusCode.Success;
 
             return oReturn;
         }
@@ -53,40 +45,28 @@ namespace Backend.Core.Core
         public async Task<GeneralResponse> CreateUser(UserRequest userIn)
         {
             var oReturn = new GeneralResponse();
+            var users = new List<UserModel>();
 
-            try
+            var user = await _UserRepositorie.GetUserByEmailAsync(userIn.EmailIn);
+
+            if (user == null)
             {
-                var users = new List<UserModel>();
-
-                var user = await _UserRepositorie.GetUserByEmailAsync(userIn.EmailIn);
-
-                if (user == null)
+               var userDb = _UserRepositorie.CreateAsync(new UserRequest()
                 {
-                    var userDb = _UserRepositorie.CreateAsync(new UserRequest()
-                    {
-                        Name = userIn.Name,
-                        EmailIn = userIn.EmailIn,
-                    });
+                  Name = userIn.Name,
+                  EmailIn = userIn.EmailIn,
+                 });
 
-                    oReturn.Data = true;
-                    oReturn.Status = (int)ServiceStatusCode.Success;
-                    oReturn.Message = "El usuario se creo exitosamente en el sistema.";
-                }
-                else
-                {
-                    oReturn.Message = "El usuario ya se encuentra registrado en el sistema.";
-                    oReturn.Data = false;
-                    oReturn.Status = (int)ServiceStatusCode.ValidationError;
-                }
-
+               oReturn.Data = true;
+               oReturn.Status = (int)ServiceStatusCode.Success;
+               oReturn.Message = "El usuario se creo exitosamente en el sistema.";
             }
-            catch (Exception ex)
+            else
             {
-                oReturn.Message = "Error creando usuario en el sistema.";
-                oReturn.Data = false;
-                oReturn.Status = (int)ServiceStatusCode.InternalError;
+              oReturn.Message = "El usuario ya se encuentra registrado en el sistema.";
+              oReturn.Data = false;
+              oReturn.Status = (int)ServiceStatusCode.ValidationError;
             }
-
             return oReturn;
         }
         #endregion

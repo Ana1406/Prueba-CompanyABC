@@ -29,8 +29,6 @@ namespace Backend.Core.Core
         {
             var oReturn = new GeneralResponse();
 
-            try
-            {
                 var mongoOk = await _dbContext.CheckConnectionAsync();
                 if (!mongoOk) {
                     oReturn.Data = new HealthResponse()
@@ -52,13 +50,6 @@ namespace Backend.Core.Core
                 oReturn.Message = "Servicio Funcionando Correctamente";
                 oReturn.Status = (int)ServiceStatusCode.Success;
 
-            }
-            catch (Exception ex)
-            {
-                oReturn.Message = $"Error obteniendo el funcionamiento del servicio {NameService}";
-                oReturn.Data = null;
-                oReturn.Status = (int)ServiceStatusCode.InternalError;
-            }
 
             return oReturn;
         }
@@ -73,8 +64,6 @@ namespace Backend.Core.Core
         {
             var oReturn = new GeneralResponse();
 
-            try
-            {
                 var version = _configuration["Version"];
                 var status = new StatusResponse()
                 {
@@ -88,16 +77,6 @@ namespace Backend.Core.Core
                     oReturn.Data = status;
                     oReturn.Message = $"Estado del servicio {NameService}";
                 oReturn.Status = (int)ServiceStatusCode.Success;
-
-
-            }
-            catch (Exception ex)
-            {
-                oReturn.Message = "Error obteniendo estado del servicio";
-                oReturn.Data = null;
-                oReturn.Status = (int)ServiceStatusCode.InternalError;
-            }
-
             return oReturn;
         }
         #endregion

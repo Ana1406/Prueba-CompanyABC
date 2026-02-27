@@ -25,19 +25,11 @@ namespace Backend.Core.Core
         {
             var oReturn = new GeneralResponse();
 
-            try
-            {
                 var ordersList = await _OrderRepositorie.GetAllAsync();
 
                 oReturn.Data = ordersList;
                 oReturn.Status = (int)ServiceStatusCode.Success;
                 oReturn.Message = $"Se encontraron {ordersList.Count} registros de ordenes en el sistema.";
-            }
-            catch (Exception ex)
-            {
-                oReturn.Message = "Error obteniendo los ordenes registrados en el sistema";
-                oReturn.Status = (int)ServiceStatusCode.InternalError;
-            }
 
             return oReturn;
         }
@@ -53,8 +45,6 @@ namespace Backend.Core.Core
         {
             var oReturn = new GeneralResponse();
 
-            try
-            {
                 var users = new List<OrderModel>();
 
                 var user = await _OrderRepositorie.GetOrderByEmailAsync(order.EmailApplicant);
@@ -79,13 +69,6 @@ namespace Backend.Core.Core
                     oReturn.Status = (int)ServiceStatusCode.ValidationError;
                 }
 
-            }
-            catch (Exception ex)
-            {
-                oReturn.Message = "Error creando pedido en el sistema.";
-                oReturn.Data = false;
-             
-            }
 
             return oReturn;
         }
