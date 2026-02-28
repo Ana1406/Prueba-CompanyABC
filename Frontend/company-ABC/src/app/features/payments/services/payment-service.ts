@@ -11,7 +11,7 @@ export class PaymentService {
   constructor(private http: HttpClient) { }
   getPayments() {
     return this.http.get<Payment[]>(
-      `${enviroments.API_PHOTOS}${EndPointRoute.GET_PAYMENTS}`
+      `${enviroments.API_PUBLIC}${EndPointRoute.GET_ALL_USERS}`
     );
   }
 }

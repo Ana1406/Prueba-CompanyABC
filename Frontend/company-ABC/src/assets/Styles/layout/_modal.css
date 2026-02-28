@@ -1,0 +1,38 @@
+.cards {
+    display: none;
+    gap: 12px;
+}
+
+.card {
+    background: var(--color-table);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+    margin-bottom: 12px;
+}
+
+.card__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__email {
+    margin-top: 8px;
+    color: var(--color-black);
+    font-size: 13px;
+}
+
+.card__actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+/* Responsive: switch to cards on small screens */
+@media (max-width: 768px) {
+
+    .cards {
+        display: block;
+    }
+}

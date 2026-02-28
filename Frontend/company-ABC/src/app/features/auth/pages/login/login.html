@@ -15,11 +15,12 @@
                     <h2 class="login__header-title">Bienvenido</h2>
                     <p class="login__header-subtitle">Ingresa con tu cuenta</p>
                 </div>
-                @if(loginSuccessSignal()){
-                <div class="login__success-alert">
+                @if(message()!==''){
+                <div class="login__success-alert"
+                    [ngClass]="{'login__success-alert': loginSuccessSignal(), 'login__success-danger' : !loginSuccessSignal()}">
                     <i class="fa-solid fa-check-circle"></i>
                     <span>
-                        ¡Sesión iniciada correctamente!</span>
+                        {{message()}}</span>
                 </div>
                 }
                 <form class="login__form" [formGroup]="loginForm">
@@ -33,11 +34,16 @@
 
                     <div class="login__actions">
                         <app-custom-button [text]="buttonTextSignal()" [disabled]="isLoadingSignal()||loginForm.invalid"
-                            (click)="handleLogin()">
+                            (click)="handleLogin(loginForm.value)">
                         </app-custom-button>
+
+
                     </div>
+                    <div class="login__header"> <a class="login__header-subtitle login__link" (click)="openModal()">
+                            Desea registrarse?</a></div>
                 </form>
             </div>
         </div>
     </div>
+    <app-modal-create [isOpen]="isModalOpen" (close)="closeModal()"></app-modal-create>
 </div>

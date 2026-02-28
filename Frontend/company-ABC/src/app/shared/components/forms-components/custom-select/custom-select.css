@@ -1,0 +1,30 @@
+@import './../../../../../assets/Styles/Constants/_colors.css';
+
+.custom-select {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.custom-select__label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.custom-select__field {
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    height: 45px;
+    padding: 0 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.custom-select__field:focus {
+    border-color: var(--color-orange);
+    outline: none;
+    box-shadow: 0 0 8px rgba(252, 164, 131, 0.3);
+}

@@ -11,7 +11,7 @@ export class OrderService {
   constructor(private http: HttpClient) { }
   getOrders() {
     return this.http.get<Order[]>(
-      `${enviroments.API_PUBLIC}${EndPointRoute.GET_ORDERS}`
+      `${enviroments.API_PUBLIC}${EndPointRoute.GET_ALL_ORDERS}`
     );
   }
 }

@@ -1,0 +1,31 @@
+@if(isOpen()){
+<div class="orders-modal">
+    <div class="orders-modal__overlay" (click)="closeModal()"></div>
+    <div class="orders-modal__dialog">
+        <header class="orders-modal__header">
+            <h3>Creacion de usuario</h3>
+
+            <app-custom-button text="×" color="ghost" (click)="closeModal()" class="modal-close"></app-custom-button>
+
+        </header>
+        <form [formGroup]="createForm">
+
+            <app-custom-input formControlName="name" [form]="createForm" label="Ingrese nombre del usuario" id="name"
+                type="text" placeholder="Ejemplo: Juan Pérez">
+            </app-custom-input>
+
+            <app-custom-input formControlName="emailIn" [form]="createForm" label="Ingrese correo del usuario"
+                id="emailIn" type="email" placeholder="Ejemplo: juan@correo.com">
+            </app-custom-input>
+            <app-custom-input formControlName="password" [form]="createForm" label="Ingrese contraseña del usuario"
+                id="password" type="password" placeholder="Ejemplo: contraseña123">
+            </app-custom-input>
+
+            <app-custom-select label="Rol" formControlName="rol" [form]="createForm"
+                [options]="options"></app-custom-select>
+            <app-custom-button text="Crear Usuario" color="secondary" [disabled]="createForm.invalid"
+                (click)="createUser(createForm)"></app-custom-button>
+        </form>
+    </div>
+</div>
+}

@@ -1,0 +1,30 @@
+.filter_users {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter_users__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+
+    .filter_users {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter_users__buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+}

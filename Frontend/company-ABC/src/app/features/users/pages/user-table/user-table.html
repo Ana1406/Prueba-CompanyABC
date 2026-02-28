@@ -3,8 +3,23 @@
         <div>
             <h2 class="table__title">Tabla de usuarios</h2>
             <p class="table__subtitle">Lista de usuarios registrados en la aplicación</p>
+
         </div>
+        <app-custom-button text="Adicionar usuario" color="ghost" (click)="openModal()"></app-custom-button>
     </header>
+    <form [formGroup]="filterForm" class="filter_users">
+        <app-custom-input formControlName="email" [form]="filterForm" label="Ingrese email" id="email" type="email"
+            placeholder="ejemplo@correo.com">
+        </app-custom-input>
+        <div class="filter_users__buttons">
+            <app-custom-button text="Buscar" class="ghost"
+                (click)="getUsers(filterForm.get('email')?.value || '', currentPage, pageSize)">
+            </app-custom-button>
+            <app-custom-button text="Borrar filtro" (click)="cleanFilters()">
+            </app-custom-button>
+        </div>
+
+    </form>
 
     <section class="table__container">
         <div class="table__table-wrap">
@@ -15,16 +30,16 @@
                         <th>#</th>
                         <th>Nombre</th>
                         <th>Correo</th>
-                        <th>Telefono</th>
+                        <th>Rol</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @for(user of userList; track user.id; let i = $index){
+                    @for(user of userList; track user.email; let i = $index){
                     <tr>
                         <td>{{ i + 1 }}</td>
                         <td> <span class="bold">{{ user.name }}</span></td>
                         <td>{{ user.email }}</td>
-                        <td>{{user.phone | phone}}
+                        <td>{{user.rol}}
 
                         </td>
                     </tr>
@@ -42,16 +57,19 @@
 
         <!-- Cards para pantallas pequeñas -->
         <div class="cards">
-            @for(user of userList; track user.id){
+            @for(user of userList; track user.email){
             <article class="card">
                 <div class="card__row">
                     <span class="bold">{{ user.name }}</span>
                 </div>
                 <div class="card__row card__email">{{ user.email }}</div>
-                <div class="card__row card__phone">{{ user.phone | phone }}</div>
+                <div class="card__row card__phone">{{ user.rol }}</div>
 
             </article>
             }
         </div>
     </section>
+    <app-paginator [totalRecords]="totalRecords" [pageSize]="pageSize" (pageChange)="onPageChange($event)">
+    </app-paginator>
+    <app-modal-create [isOpen]="isModalOpen" (close)="closeModal()"></app-modal-create>
 </div>

@@ -1,0 +1,12 @@
+<div class="custom-select">
+    <label class="custom-select__label">{{ labelSignal() }}</label>
+
+    <select class="custom-select__field" [value]="value" (change)="onSelectChange($event)" [disabled]="disabled">
+        <option value="" disabled>{{ placeholder }}</option>
+        <option *ngFor="let opt of options()" [value]="opt.value">
+            {{ opt.text }}
+        </option>
+    </select>
+
+    <app-err-msg [formGroup]="form()" [field]="formControlName()"></app-err-msg>
+</div>

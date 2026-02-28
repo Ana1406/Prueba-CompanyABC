@@ -61,10 +61,10 @@ namespace Backend.Core.Core
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Name, user.Name),
-                new Claim(ClaimTypes.Role, user.Rol)
+                new Claim("Id", user.Id),
+                new Claim("Email", user.Email),
+                new Claim("Name", user.Name),
+                new Claim("Rol", user.Rol)
             };
             var key = new SymmetricSecurityKey(
                         Encoding.UTF8.GetBytes(_configuration["Jwt:Key"])

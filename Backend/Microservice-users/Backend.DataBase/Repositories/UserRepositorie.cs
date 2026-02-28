@@ -3,6 +3,7 @@ using Backend.Domain.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
+using System.Text.RegularExpressions;
 
 
 namespace Backend.DataBase.Repositories
@@ -23,9 +24,10 @@ namespace Backend.DataBase.Repositories
             // 🔎 Filtro por email si viene
             if (!string.IsNullOrEmpty(input.Email))
             {
-                filter = Builders<UserModel>.Filter.Regex(
+                var escapedEmail = Regex.Escape(input.Email);
+                filter &= Builders<UserModel>.Filter.Regex(
                     x => x.Email,
-                    new MongoDB.Bson.BsonRegularExpression(input.Email, "i") // case insensitive
+                    new MongoDB.Bson.BsonRegularExpression($".*{escapedEmail}.*", "i")
                 );
             }
 

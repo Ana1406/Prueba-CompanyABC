@@ -2,6 +2,7 @@
 using Backend.Domain.Enums;
 using Backend.Domain.Models;
 using Backend.Domain.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Api.Controllers
@@ -21,7 +22,8 @@ namespace Backend.Api.Controllers
         /// </summary>
         /// <returns>List<UserResponse></returns>
         [HttpGet]
-        public async Task<ActionResult<GeneralResponse<List<UserResponse>>>> GetAllUsers([FromQuery] string? email,
+        [Authorize]
+        public async Task<ActionResult<GeneralResponse<List<UserResponse>>>> GetAllUsers([FromQuery] string email="",
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 10)
         {

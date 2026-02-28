@@ -1,9 +1,7 @@
 import packageJson from '../../package.json';
-const HOST = 'https://jsonplaceholder.typicode.com';
-const HOST_PHOTOS = 'https://fakestoreapi.com';
+const HOST = 'https://localhost:7012/api';
 export const enviroments = {
   context: 'develop',
   API_PUBLIC: HOST + '/',
-  API_PHOTOS: HOST_PHOTOS + '/',
   version: packageJson.version,
 };
