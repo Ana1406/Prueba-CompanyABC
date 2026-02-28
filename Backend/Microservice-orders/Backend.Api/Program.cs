@@ -2,6 +2,7 @@ using Backend.Core.Core;
 using Backend.Core.Core.Interfaces;
 using Backend.DataBase.DataBase;
 using Backend.DataBase.Repositories;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,17 @@ builder.Services.AddControllers();
 builder.Services.Configure<MongoSettings>(
     builder.Configuration.GetSection("MongoSettings"));
 builder.Services.AddSingleton<DbContext>();
+builder.Services.Configure<PaymentServiceSettings>(
+    builder.Configuration.GetSection("PaymentService"));
+builder.Services.AddHttpClient<IPaymentServices, PaymentServices>()
+    .ConfigureHttpClient((serviceProvider, client) =>
+    {
+        var settings = serviceProvider
+            .GetRequiredService<IOptions<PaymentServiceSettings>>()
+            .Value;
+
+        client.BaseAddress = new Uri(settings.BaseUrl);
+    });
 // --- Add Scopes
 builder.Services.AddTransient<IOrderRepositorie, OrderRepositorie>();
 builder.Services.AddTransient<IOrderCore, OrderCore>();

@@ -36,3 +36,16 @@ C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microse
 C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-payment\Backend.Domain\obj\Debug\net8.0\refint\Backend.Domain.dll
 C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-payment\Backend.Domain\obj\Debug\net8.0\Backend.Domain.pdb
 C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Backend\Microservicie-payment\Backend.Domain\obj\Debug\net8.0\ref\Backend.Domain.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\bin\Debug\net8.0\Backend.Domain.deps.json
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\bin\Debug\net8.0\Backend.Domain.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\bin\Debug\net8.0\Backend.Domain.pdb
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\obj\Debug\net8.0\Backend.Domain.csproj.AssemblyReference.cache
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\obj\Debug\net8.0\Backend.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\obj\Debug\net8.0\Backend.Domain.AssemblyInfoInputs.cache
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\obj\Debug\net8.0\Backend.Domain.AssemblyInfo.cs
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\obj\Debug\net8.0\Backend.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\obj\Debug\net8.0\Backend.Domain.sourcelink.json
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\obj\Debug\net8.0\Backend.Domain.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\obj\Debug\net8.0\refint\Backend.Domain.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\obj\Debug\net8.0\Backend.Domain.pdb
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-payment\Backend.Domain\obj\Debug\net8.0\ref\Backend.Domain.dll

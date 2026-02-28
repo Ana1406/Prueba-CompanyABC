@@ -32,7 +32,7 @@ public class ExceptionMiddleware
         context.Response.ContentType = "application/json";
         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-        var response = new GeneralResponse(
+        var response = new GeneralResponse<object?>(
             message: "Ocurrió un error interno",
             data: null,
             status: context.Response.StatusCode

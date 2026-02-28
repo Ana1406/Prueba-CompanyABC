@@ -16,11 +16,22 @@ namespace Backend.Api.Controllers
         }
 
         /// <summary>
+        /// GetPaymentByOrderId
+        /// </summary>
+        /// <returns><PaymentResponse></returns>
+        [HttpGet]
+        public async Task<ActionResult<GeneralResponse<PaymentResponse>>> GetPaymentByOrderId(string orderId)
+        {
+
+            return Ok(await _paymentCore.GetPaymentByOrderId(orderId));
+        }
+
+        /// <summary>
         /// GetAllPayment
         /// </summary>
         /// <returns>List<PaymentResponse></returns>
         [HttpGet]
-        public async Task<ActionResult<GeneralResponse>> GetAllPayment()
+        public async Task<ActionResult<GeneralResponse<List<PaymentResponse>>>> GetAllPayment()
         {
 
             return Ok(await _paymentCore.GetAllPayments());
@@ -32,10 +43,20 @@ namespace Backend.Api.Controllers
         /// <param name="payment">PaymentRequest</param>
         /// <returns>bool</returns>
         [HttpPost]
-        public async Task<ActionResult<GeneralResponse>> CreatePayment(PaymentRequest payment)
+        public async Task<ActionResult<GeneralResponse<bool>>> CreatePayment(PaymentRequest payment)
         {
-
             return Ok(await _paymentCore.CreatePayment(payment));
+        }
+
+        /// <summary>
+        /// CreatePayment
+        /// </summary>
+        /// <param name="payment">PaymentRequest</param>
+        /// <returns>bool</returns>
+        [HttpPut]
+        public async Task<ActionResult<GeneralResponse<bool>>> UpdatePayment(string idPayment)
+        {
+            return Ok(await _paymentCore.UpdateStatusPayment(idPayment));
         }
     }
 }

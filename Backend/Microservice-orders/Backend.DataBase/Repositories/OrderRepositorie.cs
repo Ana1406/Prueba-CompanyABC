@@ -44,17 +44,15 @@ namespace Backend.DataBase.Repositories
         {
             var orderExits = Builders<OrderModel>.Filter.Eq(x => x.IdOrder, order.IdOrder);
 
-            var orderModel = new OrderModel()
-            {
-                IdUser = order.IdUser,
-                NameApplicant = order.NameApplicant,
-                EmailApplicant = order.EmailApplicant,
-                Products = order.Products,
-                Enabled = true
-            };
+            var update = Builders<OrderModel>.Update
+                .Set(x => x.NameApplicant, order.NameApplicant)
+                .Set(x => x.EmailApplicant, order.EmailApplicant)
+                .Set(x => x.Products, order.Products);
+       
 
-            await _collection.ReplaceOneAsync(orderExits, orderModel);
-            return orderModel.IdOrder;
+            await _collection.UpdateOneAsync(orderExits, update);
+
+            return order.IdOrder;
         }
 
         public async Task<string> DisabledOrderByIdAsync(string orderId)

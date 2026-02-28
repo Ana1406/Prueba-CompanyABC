@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace Backend.Domain.Response
 {
-    public class GeneralResponse
+    public class GeneralResponse<T>
     {
 
         public GeneralResponse()
         {
 
         }
-        public GeneralResponse(string message, dynamic data, int status)
+        public GeneralResponse(string message, T data, int status)
         {
             Message = message;
             Data = data;
             Status = status;
         }
         public int Status { get; set; }
-        public dynamic? Data { get; set; }
+        public T? Data { get; set; }
         public string Message { get; set; }
     };
 }

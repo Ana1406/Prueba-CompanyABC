@@ -25,9 +25,9 @@ namespace Backend.Core.Core
         /// Get health Information
         /// </summary>
         /// <returns>HealthResponse </returns>
-        public async Task<GeneralResponse> HealthAsync()
+        public async Task<GeneralResponse<HealthResponse>> HealthAsync()
         {
-            var oReturn = new GeneralResponse();
+            var oReturn = new GeneralResponse<HealthResponse>();
                 var mongoOk = await _dbContext.CheckConnectionAsync();
                 if (!mongoOk) {
                     oReturn.Data = new HealthResponse()
@@ -59,9 +59,9 @@ namespace Backend.Core.Core
         /// Get Status Info
         /// </summary>
         /// <returns> StatusResponse</returns>
-        public async Task<GeneralResponse> StatusAsync()
+        public async Task<GeneralResponse<StatusResponse>> StatusAsync()
         {
-            var oReturn = new GeneralResponse();
+            var oReturn = new GeneralResponse<StatusResponse>();
 
                 var version = _configuration["Version"];
                 var status = new StatusResponse()

@@ -13,12 +13,12 @@ namespace Backend.Core.Core
         /// <summary>
         /// GetHealth
         /// </summary>
-        Task<GeneralResponse> HealthAsync();
+        Task<GeneralResponse<HealthResponse>> HealthAsync();
 
         /// <summary>
         /// GetStatus
         /// </summary>
-        Task<GeneralResponse> StatusAsync();
+        Task<GeneralResponse<StatusResponse>> StatusAsync();
 
     }
 }

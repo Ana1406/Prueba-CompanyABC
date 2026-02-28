@@ -8,8 +8,10 @@ namespace Backend.DataBase.Repositories
     public interface IPaymentRepositorie
     {
         Task<List<PaymentResponse>> GetAllAsync();
-        Task CreateAsync(PaymentRequest user);
-        Task<PaymentModel> GetPaymentByIdAsync(string id);
+        Task<string> CreateAsync(PaymentRequest user);
+
+        Task<string> UpdateStatusAsync(string IdPayment);
+        Task<PaymentResponse> GetPaymentByIdOrderAsync(string idOrder);
 
     }
  

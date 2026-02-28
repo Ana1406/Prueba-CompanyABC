@@ -17,17 +17,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/HealthResponseGeneralResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/HealthResponseGeneralResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/HealthResponseGeneralResponse"
                 }
               }
             }
@@ -46,17 +46,55 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/StatusResponseGeneralResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/StatusResponseGeneralResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/StatusResponseGeneralResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Payments/GetPaymentByOrderId": {
+      "get": {
+        "tags": [
+          "Payments"
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentResponseGeneralResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentResponseGeneralResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentResponseGeneralResponse"
                 }
               }
             }
@@ -75,17 +113,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/PaymentResponseListGeneralResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/PaymentResponseListGeneralResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/PaymentResponseListGeneralResponse"
                 }
               }
             }
@@ -123,17 +161,55 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/BooleanGeneralResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/BooleanGeneralResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/BooleanGeneralResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Payments/UpdatePayment": {
+      "put": {
+        "tags": [
+          "Payments"
+        ],
+        "parameters": [
+          {
+            "name": "idPayment",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGeneralResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGeneralResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGeneralResponse"
                 }
               }
             }
@@ -144,7 +220,7 @@
   },
   "components": {
     "schemas": {
-      "GeneralResponse": {
+      "BooleanGeneralResponse": {
         "type": "object",
         "properties": {
           "status": {
@@ -152,7 +228,42 @@
             "format": "int32"
           },
           "data": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HealthResponse": {
+        "type": "object",
+        "properties": {
+          "service": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataBase": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeStamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HealthResponseGeneralResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/HealthResponse"
           },
           "message": {
             "type": "string",
@@ -165,6 +276,10 @@
         "type": "object",
         "properties": {
           "nameOwner": {
+            "type": "string",
+            "nullable": true
+          },
+          "idOrder": {
             "type": "string",
             "nullable": true
           },
@@ -181,6 +296,115 @@
             "items": {
               "type": "string"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaymentResponse": {
+        "type": "object",
+        "properties": {
+          "idPayment": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameOwner": {
+            "type": "string",
+            "nullable": true
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "totalPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaymentResponseGeneralResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PaymentResponse"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaymentResponseListGeneralResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentResponse"
+            },
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StatusResponse": {
+        "type": "object",
+        "properties": {
+          "service": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "environment": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeStamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StatusResponseGeneralResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/StatusResponse"
+          },
+          "message": {
+            "type": "string",
             "nullable": true
           }
         },

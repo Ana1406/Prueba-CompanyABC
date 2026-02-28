@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "Backend.Api.Controllers.OrdersController",
+    "Method": "CreateOrder",
+    "RelativePath": "api/Orders/CreateOrder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "Backend.Domain.Models.OrderRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Backend.Domain.Response.GeneralResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Api.Controllers.OrdersController",
     "Method": "DeleteOrder",
     "RelativePath": "api/Orders/DeleteOrder",
     "HttpMethod": "POST",
@@ -10,12 +36,38 @@
       {
         "Name": "orderId",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Backend.Domain.Response.GeneralResponse",
+        "Type": "Backend.Domain.Response.GeneralResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Api.Controllers.OrdersController",
+    "Method": "EditOrder",
+    "RelativePath": "api/Orders/EditOrder",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "Backend.Domain.Models.OrderRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Backend.Domain.Response.GeneralResponse\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -35,33 +87,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Backend.Domain.Response.GeneralResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Backend.Api.Controllers.OrdersController",
-    "Method": "UpsertOrder",
-    "RelativePath": "api/Orders/UpsertOrder",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "order",
-        "Type": "Backend.Domain.Models.OrderRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Backend.Domain.Response.GeneralResponse",
+        "Type": "Backend.Domain.Response.GeneralResponse\u00601[[System.Collections.Generic.List\u00601[[Backend.Domain.Models.ProductResponse, Backend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -81,7 +107,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Backend.Domain.Response.GeneralResponse",
+        "Type": "Backend.Domain.Response.GeneralResponse\u00601[[Backend.Domain.Models.HealthResponse, Backend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -101,7 +127,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Backend.Domain.Response.GeneralResponse",
+        "Type": "Backend.Domain.Response.GeneralResponse\u00601[[Backend.Domain.Models.HealthResponse, Backend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

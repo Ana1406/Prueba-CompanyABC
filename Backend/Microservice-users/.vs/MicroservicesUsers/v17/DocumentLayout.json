@@ -58,8 +58,7 @@
               "RelativeToolTip": "Backend.Core\\Core\\Interfaces\\IUsersCore.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T00:49:56.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T00:49:56.109Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "Backend.DataBase\\Interfaces\\IUserRepositorie.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T00:44:26.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T00:44:26.975Z"
             },
             {
               "$type": "Document",
@@ -82,7 +80,7 @@
               "RelativeDocumentMoniker": "Backend.DataBase\\Repositories\\UserRepositorie.cs",
               "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.DataBase\\Repositories\\UserRepositorie.cs",
               "RelativeToolTip": "Backend.DataBase\\Repositories\\UserRepositorie.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowC0AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-27T00:39:23.813Z",
               "EditorCaption": ""
@@ -97,8 +95,7 @@
               "RelativeToolTip": "Backend.Core\\Core\\HealthCore.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T00:12:10.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T00:12:10.703Z"
             },
             {
               "$type": "Document",
@@ -122,8 +119,7 @@
               "RelativeToolTip": "Backend.Core\\Core\\UsersCore.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAowDYAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T00:03:17.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T00:03:17.086Z"
             },
             {
               "$type": "Document",
@@ -135,8 +131,7 @@
               "RelativeToolTip": "Backend.Api\\Controllers\\UsersController.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAwwEkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T00:01:42.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T00:01:42.721Z"
             },
             {
               "$type": "Document",

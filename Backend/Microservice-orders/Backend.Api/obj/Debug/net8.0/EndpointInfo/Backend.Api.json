@@ -17,17 +17,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/HealthResponseGeneralResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/HealthResponseGeneralResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/HealthResponseGeneralResponse"
                 }
               }
             }
@@ -46,17 +46,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/HealthResponseGeneralResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/HealthResponseGeneralResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/HealthResponseGeneralResponse"
                 }
               }
             }
@@ -75,17 +75,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/ProductResponseListGeneralResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/ProductResponseListGeneralResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/ProductResponseListGeneralResponse"
                 }
               }
             }
@@ -93,7 +93,7 @@
         }
       }
     },
-    "/api/Orders/UpsertOrder": {
+    "/api/Orders/CreateOrder": {
       "post": {
         "tags": [
           "Orders"
@@ -123,17 +123,65 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/StringGeneralResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/StringGeneralResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/StringGeneralResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Orders/EditOrder": {
+      "put": {
+        "tags": [
+          "Orders"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGeneralResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGeneralResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanGeneralResponse"
                 }
               }
             }
@@ -146,32 +194,42 @@
         "tags": [
           "Orders"
         ],
-        "parameters": [
-          {
-            "name": "orderId",
-            "in": "query",
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/StringGeneralResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/StringGeneralResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponse"
+                  "$ref": "#/components/schemas/StringGeneralResponse"
                 }
               }
             }
@@ -182,7 +240,7 @@
   },
   "components": {
     "schemas": {
-      "GeneralResponse": {
+      "BooleanGeneralResponse": {
         "type": "object",
         "properties": {
           "status": {
@@ -190,7 +248,42 @@
             "format": "int32"
           },
           "data": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HealthResponse": {
+        "type": "object",
+        "properties": {
+          "service": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataBase": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeStamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HealthResponseGeneralResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/HealthResponse"
           },
           "message": {
             "type": "string",
@@ -223,6 +316,70 @@
             "items": {
               "type": "string"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductResponse": {
+        "type": "object",
+        "properties": {
+          "idOrder": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameApplicant": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailApplicant": {
+            "type": "string",
+            "nullable": true
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductResponseListGeneralResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductResponse"
+            },
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringGeneralResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
             "nullable": true
           }
         },

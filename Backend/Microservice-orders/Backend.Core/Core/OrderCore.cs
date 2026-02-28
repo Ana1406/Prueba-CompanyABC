@@ -11,19 +11,21 @@ namespace Backend.Core.Core
     public class OrderCore : IOrderCore
     {
         private readonly IOrderRepositorie _OrderRepositorie;
+        private readonly IPaymentServices _PaymentServices;
 
-        public OrderCore(IOrderRepositorie orderRepositorie)
+        public OrderCore(IOrderRepositorie orderRepositorie, IPaymentServices PaymentServices)
         {
             _OrderRepositorie = orderRepositorie;
+            _PaymentServices = PaymentServices;
         }
         #region Get all orders
         /// <summary>
         /// Get order complete list
         /// </summary>
         /// <returns>List<UserDto> </returns>
-        public async Task<GeneralResponse> GetAllOrders()
+        public async Task<GeneralResponse<List<ProductResponse>>> GetAllOrders()
         {
-            var oReturn = new GeneralResponse();
+            var oReturn = new GeneralResponse<List<ProductResponse>>();
 
                 var ordersList = await _OrderRepositorie.GetAllAsync();
 
@@ -41,66 +43,89 @@ namespace Backend.Core.Core
         /// </summary>
         /// <param name="input">OrderRequest</param>
         /// <returns>bool</returns>
-        public async Task<GeneralResponse> UpsertOrder(OrderRequest orderIn)
+        public async Task<GeneralResponse<string>> CreateOrder(OrderRequest orderIn)
         {
-            var oReturn = new GeneralResponse();
+            var oReturn = new GeneralResponse<string>();
 
-                var order = await _OrderRepositorie.GetOrderByIdAsync(orderIn.IdUser);
 
-                if (order == null)
-                {
-                    var orderDb = _OrderRepositorie.CreateAsync(new OrderRequest()
+                    var orderDb = await _OrderRepositorie.CreateAsync(new OrderRequest()
                     {
                         IdUser = orderIn.IdUser,
                         NameApplicant = orderIn.NameApplicant,
                         EmailApplicant = orderIn.EmailApplicant,
                         Products = orderIn.Products,
                     });
+            if (orderDb != null)
+            {
+                _PaymentServices.CreatePaymentAsync(orderIn, orderDb);
+            }
 
                     oReturn.Data = orderDb;
                     oReturn.Status = (int)ServiceStatusCode.Success;
                     oReturn.Message = $"El pedido se creo exitosamente en el sistema bajo el id {orderDb}.";
-                }
-                else
-                {
-                //Logica para revisar estado de pago en microservicio de pago
-
-                var userDb = _OrderRepositorie.UpdateAsync(new OrderRequest()
-                {
-                    NameApplicant = order.NameApplicant,
-                    EmailApplicant = order.EmailApplicant,
-                    Products = order.Products,
-                });
-
-                oReturn.Data = true;
-                oReturn.Status = (int)ServiceStatusCode.Success;
-                oReturn.Message = "El pedido se edito exitosamente en el sistema.";
-            }
-
 
             return oReturn;
         }
         #endregion
 
-        #region Create Order
+        #region Update Order
+        /// <summary>
+        /// Create Order
+        /// </summary>
+        /// <param name="input">OrderRequest</param>
+        /// <returns>bool</returns>
+        public async Task<GeneralResponse<bool>> EditOrder(OrderRequest orderIn)
+        {
+            var oReturn = new GeneralResponse<bool>();
+
+            //Logica para revisar estado de pago en microservicio de pago
+            var payment = await _PaymentServices.GetPaymentByOrderId(orderIn.IdOrder);
+            if (!payment.Status) {
+                var userDb = _OrderRepositorie.UpdateAsync(new OrderRequest()
+                {
+                    NameApplicant = orderIn.NameApplicant,
+                    EmailApplicant = orderIn.EmailApplicant,
+                    Products = orderIn.Products,
+                });
+
+                oReturn.Data = true;
+                oReturn.Status = (int)ServiceStatusCode.Success;
+                oReturn.Message = "El pedido se edito exitosamente en el sistema.";
+                return oReturn;
+            }
+
+            oReturn.Data = false;
+            oReturn.Status = (int)ServiceStatusCode.Success;
+            oReturn.Message = "El pedido se ya se encuentra pagado. No es posible editar.";
+            return oReturn;
+
+
+
+        }
+        #endregion
+
+        #region Delete Order
         /// <summary>
         /// Delete Order
         /// </summary>
         /// <param name="input">OrderRequest</param>
         /// <returns>bool</returns>
-        public async Task<GeneralResponse> DeleteOrder(string orderId)
+        public async Task<GeneralResponse<string>> DeleteOrder(string orderId)
         {
-            var oReturn = new GeneralResponse();
-
-            var order = await _OrderRepositorie.DisabledOrderByIdAsync(orderId);
+            var oReturn = new GeneralResponse<string>();
+            var payment = await _PaymentServices.GetPaymentByOrderId(orderId);
+            if (!payment.Status)
+            {
+                var order = await _OrderRepositorie.DisabledOrderByIdAsync(orderId);
 
                 oReturn.Data = order;
                 oReturn.Status = (int)ServiceStatusCode.Success;
                 oReturn.Message = $"El pedido se elimino exitosamente en el sistema.";
-            
-          
-
-
+                return oReturn;
+            }
+            oReturn.Data = null;
+            oReturn.Status = (int)ServiceStatusCode.ValidationError;
+            oReturn.Message = $"El pedido se ya se encuentra pagado. No es posible ejecutar la accion.";
             return oReturn;
         }
         #endregion

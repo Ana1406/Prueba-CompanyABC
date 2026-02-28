@@ -21,15 +21,34 @@ namespace Backend.Core.Core
         /// Get payment complete list
         /// </summary>
         /// <returns>List<PaymentDto> </returns>
-        public async Task<GeneralResponse> GetAllPayments()
+        public async Task<GeneralResponse<List<PaymentResponse>>> GetAllPayments()
         {
-            var oReturn = new GeneralResponse();
+            var oReturn = new GeneralResponse<List<PaymentResponse>>();
 
-                var usersList = await _PaymentRepositorie.GetAllAsync();
+                var paymentsList = await _PaymentRepositorie.GetAllAsync();
 
-                oReturn.Data = usersList;
+                oReturn.Data = paymentsList;
                 oReturn.Status = (int)ServiceStatusCode.Success;
-                oReturn.Message = $"Se encontraron {usersList.Count} registros de pagos en el sistema.";
+                oReturn.Message = $"Se encontraron {paymentsList.Count} registros de pagos en el sistema.";
+
+            return oReturn;
+        }
+        #endregion
+
+        #region Get Payment By Order Id
+        /// <summary>
+        /// Get Payment By Order Id
+        /// </summary>
+        /// <returns><PaymentDto> </returns>
+        public async Task<GeneralResponse<PaymentResponse>> GetPaymentByOrderId(string orderId)
+        {
+            var oReturn = new GeneralResponse<PaymentResponse>();
+
+            var payment = await _PaymentRepositorie.GetPaymentByIdOrderAsync(orderId);
+
+            oReturn.Data = payment;
+            oReturn.Status = (int)ServiceStatusCode.Success;
+            oReturn.Message = $"Se encontro el registro de pago en el sistema.";
 
             return oReturn;
         }
@@ -41,21 +60,35 @@ namespace Backend.Core.Core
         /// </summary>
         /// <param name="payment">PaymentRequest</param>
         /// <returns>bool</returns>
-        public async Task<GeneralResponse> CreatePayment(PaymentRequest payment)
+        public async Task<GeneralResponse<bool>> CreatePayment(PaymentRequest payment)
         {
-            var oReturn = new GeneralResponse();
+            var oReturn = new GeneralResponse<bool>();
 
-                    var paymentDb = _PaymentRepositorie.CreateAsync(new PaymentRequest()
-                    {
-                        NameOwner = payment.NameOwner,
-                        EmailOwner = payment.EmailOwner,
-                        Products = payment.Products,
-                        TotalPrice = payment.TotalPrice,
-                    });
+                    var paymentDb = _PaymentRepositorie.CreateAsync(payment);
 
                 oReturn.Data = true;
                 oReturn.Status = (int)ServiceStatusCode.Success;
                 oReturn.Message = "El pago se realizo exitosamente en el sistema.";
+
+            return oReturn;
+        }
+        #endregion
+
+        #region Update Status Payment
+        /// <summary>
+        /// Update Status Payment
+        /// </summary>
+        /// <param name="payment">PaymentRequest</param>
+        /// <returns>bool</returns>
+        public async Task<GeneralResponse<bool>> UpdateStatusPayment(string idPayment)
+        {
+            var oReturn = new GeneralResponse<bool>();
+
+            var paymentDb = _PaymentRepositorie.UpdateStatusAsync(idPayment);
+
+            oReturn.Data = true;
+            oReturn.Status = (int)ServiceStatusCode.Success;
+            oReturn.Message = "El pago se actualizo exitosamente en el sistema.";
 
             return oReturn;
         }

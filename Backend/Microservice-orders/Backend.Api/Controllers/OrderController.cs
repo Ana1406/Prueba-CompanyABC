@@ -20,7 +20,7 @@ namespace Backend.Api.Controllers
         /// </summary>
         /// <returns>List<OrderResponse></returns>
         [HttpGet]
-        public async Task<ActionResult<GeneralResponse>> GetAllOrders()
+        public async Task<ActionResult<GeneralResponse<List<ProductResponse>>>> GetAllOrders()
         {
 
             return Ok(await _orderCore.GetAllOrders());
@@ -32,10 +32,22 @@ namespace Backend.Api.Controllers
         /// <param name="order">OrderRequest</param>
         /// <returns>bool</returns>
         [HttpPost]
-        public async Task<ActionResult<GeneralResponse>> UpsertOrder([FromBody] OrderRequest order)
+        public async Task<ActionResult<GeneralResponse<string>>> CreateOrder([FromBody] OrderRequest order)
         {
 
-            return Ok(await _orderCore.UpsertOrder(order));
+            return Ok(await _orderCore.CreateOrder(order));
+        }
+
+        /// <summary>
+        /// Edit
+        /// </summary>
+        /// <param name="order">OrderRequest</param>
+        /// <returns>bool</returns>
+        [HttpPut]
+        public async Task<ActionResult<GeneralResponse<bool>>> EditOrder([FromBody] OrderRequest order)
+        {
+
+            return Ok(await _orderCore.EditOrder(order));
         }
 
         /// <summary>
@@ -44,7 +56,7 @@ namespace Backend.Api.Controllers
         /// <param name="order">OrderId</param>
         /// <returns>bool</returns>
         [HttpPost]
-        public async Task<ActionResult<GeneralResponse>> DeleteOrder([FromBody] string orderId)
+        public async Task<ActionResult<GeneralResponse<string>>> DeleteOrder([FromBody] string orderId)
         {
 
             return Ok(await _orderCore.DeleteOrder(orderId));

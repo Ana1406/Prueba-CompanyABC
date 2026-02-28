@@ -21,7 +21,7 @@ namespace Backend.Api.Controllers
         /// <returns>HealthResponse</returns>
         [HttpGet]
         [Route("health")]
-        public async Task<ActionResult<GeneralResponse>> Health()
+        public async Task<ActionResult<GeneralResponse<HealthResponse>>> Health()
         {
 
             return Ok( await _healthCore.HealthAsync());
@@ -33,7 +33,7 @@ namespace Backend.Api.Controllers
         /// <returns>StatusResponse</returns>
         [HttpGet]
         [Route("status")]
-        public async Task<ActionResult<GeneralResponse>> Status()
+        public async Task<ActionResult<GeneralResponse<HealthResponse>>> Status()
         {
 
             return Ok( await _healthCore.StatusAsync());

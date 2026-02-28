@@ -13,13 +13,24 @@ namespace Backend.Core.Core.Interfaces
         /// <summary>
         /// GetAllPayment
         /// </summary>
-        Task<GeneralResponse> GetAllPayments();
+        Task<GeneralResponse<List<PaymentResponse>>> GetAllPayments();
+
+        /// <summary>
+        /// Get Payment By Order Id
+        /// </summary>
+        /// <returns><PaymentDto> </returns>
+        Task<GeneralResponse<PaymentResponse>> GetPaymentByOrderId(string orderId);
 
         /// <summary>
         /// CreatePayment
         /// </summary>
         /// <param name="payment">PaymentRequest</param>
-        Task<GeneralResponse> CreatePayment(PaymentRequest payment);
+        Task<GeneralResponse<bool>> CreatePayment(PaymentRequest payment);
 
+        /// <summary>
+        /// Update Status Payment
+        /// </summary>
+        /// <param name="payment">PaymentRequest</param>
+        Task<GeneralResponse<bool>> UpdateStatusPayment(string idPayment);
     }
 }
