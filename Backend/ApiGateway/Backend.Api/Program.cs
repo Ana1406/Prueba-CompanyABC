@@ -1,42 +1,35 @@
-using Backend.Core.Core;
-using Backend.Core.Core.Interfaces;
-using Backend.DataBase.DataBase;
-using Backend.DataBase.Repositories;
+
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-// Add services to the container.
-builder.Services.AddControllers();
-// --- Configuration MongoDB
-builder.Services.Configure<MongoSettings>(
-    builder.Configuration.GetSection("MongoSettings"));
-builder.Services.AddSingleton<DbContext>();
-// --- Add Scopes
-builder.Services.AddTransient<IUserRepositorie, UserRepositorie>();
-builder.Services.AddTransient<IUsersCore, UsersCore>();
-builder.Services.AddTransient<IHealthCore, HealthCore>();
-builder.Services.AddEndpointsApiExplorer();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo
+
+builder.Services.AddReverseProxy()
+    .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"));
+
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer("Bearer", options =>
     {
-        Title = "Microservices Users",
-        Version = "v1",
-        Description = "Microservice in charge of logic about users in ABC Company"
+        options.TokenValidationParameters = new()
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = "TuIssuer",
+            ValidAudience = "TuAudience",
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:Key"]!))
+        };
     });
-});
+
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-
-    app.UseSwagger();
-    app.UseSwaggerUI();
-
-
-app.UseHttpsRedirection();
-app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
-app.UseMiddleware<ExceptionMiddleware>();
-app.MapControllers();   
+app.MapReverseProxy();
+
 app.Run();

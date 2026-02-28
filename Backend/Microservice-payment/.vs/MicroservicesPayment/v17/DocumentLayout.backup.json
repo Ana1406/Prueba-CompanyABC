@@ -86,9 +86,9 @@
               "Title": "ExceptionMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-payment\\Backend.Api\\Middlewares\\ExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "Backend.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-payment\\Backend.Api\\Middlewares\\ExceptionMiddleware.cs*",
-              "RelativeToolTip": "Backend.Api\\Middlewares\\ExceptionMiddleware.cs*",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAACIAAAAyAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-payment\\Backend.Api\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "Backend.Api\\Middlewares\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACQAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-28T05:17:21.984Z",
               "EditorCaption": ""
@@ -103,8 +103,7 @@
               "RelativeToolTip": "Backend.Api\\Controllers\\ProjectController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T05:16:12.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T05:16:12.257Z"
             },
             {
               "$type": "Document",
@@ -116,8 +115,7 @@
               "RelativeToolTip": "Backend.Core\\Core\\Interfaces\\IHealthCore.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T05:08:13.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T05:08:13.013Z"
             },
             {
               "$type": "Document",
@@ -129,8 +127,7 @@
               "RelativeToolTip": "Backend.Core\\Core\\HealthCore.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAQwEAAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T05:07:19.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T05:07:19.399Z"
             },
             {
               "$type": "Document",
@@ -142,8 +139,7 @@
               "RelativeToolTip": "Backend.Domain\\Response\\GeneralResponse.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAABEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T04:38:23.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T04:38:23.159Z"
             },
             {
               "$type": "Document",
@@ -155,8 +151,7 @@
               "RelativeToolTip": "Backend.Domain\\Response\\PaymentResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T03:36:57.373Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T03:36:57.373Z"
             },
             {
               "$type": "Document",
@@ -168,21 +163,19 @@
               "RelativeToolTip": "Backend.Api\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-28T02:32:42.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T02:32:42.145Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "Backend.Api",
+              "Title": "Backend.Api.csproj",
               "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-payment\\Backend.Api\\Backend.Api.csproj",
               "RelativeDocumentMoniker": "Backend.Api\\Backend.Api.csproj",
               "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-payment\\Backend.Api\\Backend.Api.csproj",
               "RelativeToolTip": "Backend.Api\\Backend.Api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-28T02:32:17.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T02:32:17.008Z"
             },
             {
               "$type": "Document",
@@ -194,8 +187,7 @@
               "RelativeToolTip": "Backend.Api\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T02:31:23.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T02:31:23.42Z"
             },
             {
               "$type": "Document",
@@ -207,8 +199,7 @@
               "RelativeToolTip": "Backend.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-28T02:31:22.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T02:31:22.113Z"
             },
             {
               "$type": "Document",
@@ -220,8 +211,7 @@
               "RelativeToolTip": "Backend.Core\\Core\\PaymentCore.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAuwAoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T02:28:29.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T02:28:29.196Z"
             },
             {
               "$type": "Document",
@@ -233,8 +223,7 @@
               "RelativeToolTip": "Backend.Core\\Core\\Interfaces\\IPaymentCore.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T02:27:40.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T02:27:40.145Z"
             },
             {
               "$type": "Document",
@@ -246,8 +235,7 @@
               "RelativeToolTip": "Backend.Domain\\Request\\PaymentRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T02:19:40.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T02:19:40.293Z"
             },
             {
               "$type": "Document",
@@ -259,8 +247,7 @@
               "RelativeToolTip": "Backend.DataBase\\Repositories\\PaymentRepositorie.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAhwEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T02:18:33.562Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T02:18:33.562Z"
             },
             {
               "$type": "Document",
@@ -272,8 +259,7 @@
               "RelativeToolTip": "Backend.DataBase\\Interfaces\\IPaymentRepositorie.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAvwA0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T02:18:07.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T02:18:07.667Z"
             },
             {
               "$type": "Document",
@@ -285,8 +271,7 @@
               "RelativeToolTip": "Backend.DataBase\\Models\\PaymentModel.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T02:16:50.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T02:16:50.021Z"
             },
             {
               "$type": "Document",
@@ -298,8 +283,7 @@
               "RelativeToolTip": "Backend.Api\\Controllers\\PaymentsController.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAkwDgAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T18:55:08.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T18:55:08.207Z"
             }
           ]
         }
