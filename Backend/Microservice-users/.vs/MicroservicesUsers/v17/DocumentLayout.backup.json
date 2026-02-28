@@ -3,40 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.database\\repositories\\userrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|solutionrelative:backend.database\\repositories\\userrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|solutionrelative:backend.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.core\\core\\userscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|solutionrelative:backend.core\\core\\userscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|solutionrelative:backend.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.core\\core\\interfaces\\iauthcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|solutionrelative:backend.core\\core\\interfaces\\iauthcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96EC218E-C082-44DE-9B57-BEBD86BE50CE}|Backend.Domain\\Backend.Domain.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.domain\\request\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96EC218E-C082-44DE-9B57-BEBD86BE50CE}|Backend.Domain\\Backend.Domain.csproj|solutionrelative:backend.domain\\request\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.core\\core\\authcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|solutionrelative:backend.core\\core\\authcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96EC218E-C082-44DE-9B57-BEBD86BE50CE}|Backend.Domain\\Backend.Domain.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.domain\\request\\userrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96EC218E-C082-44DE-9B57-BEBD86BE50CE}|Backend.Domain\\Backend.Domain.csproj|solutionrelative:backend.domain\\request\\userrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|solutionrelative:backend.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.core\\core\\interfaces\\iuserscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|solutionrelative:backend.core\\core\\interfaces\\iuserscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.database\\repositories\\userrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|solutionrelative:backend.database\\repositories\\userrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.database\\interfaces\\iuserrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A163FB87-6025-4FC5-A474-D5B20F45EC25}|Backend.DataBase\\Backend.DataBase.csproj|solutionrelative:backend.database\\interfaces\\iuserrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.core\\core\\healthcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7F68141-D114-465F-B80D-4E7CCF47D469}|Backend.Core\\Backend.Core.csproj|solutionrelative:backend.core\\core\\healthcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|solutionrelative:backend.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.api\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|solutionrelative:backend.api\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F6D768A-DECD-4511-8FDD-2A7D1438D023}|Backend.Api\\Backend.Api.csproj|solutionrelative:backend.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{96EC218E-C082-44DE-9B57-BEBD86BE50CE}|Backend.Domain\\Backend.Domain.csproj|c:\\users\\gr_98\\onedrive\\documentos\\prueba tecnica nexos software\\company-abc\\backend\\microservice-users\\backend.domain\\response\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96EC218E-C082-44DE-9B57-BEBD86BE50CE}|Backend.Domain\\Backend.Domain.csproj|solutionrelative:backend.domain\\response\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,121 +46,124 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IUsersCore.cs",
-              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Core\\Core\\Interfaces\\IUsersCore.cs",
-              "RelativeDocumentMoniker": "Backend.Core\\Core\\Interfaces\\IUsersCore.cs",
-              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Core\\Core\\Interfaces\\IUsersCore.cs",
-              "RelativeToolTip": "Backend.Core\\Core\\Interfaces\\IUsersCore.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T00:49:56.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IUserRepositorie.cs",
-              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.DataBase\\Interfaces\\IUserRepositorie.cs",
-              "RelativeDocumentMoniker": "Backend.DataBase\\Interfaces\\IUserRepositorie.cs",
-              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.DataBase\\Interfaces\\IUserRepositorie.cs",
-              "RelativeToolTip": "Backend.DataBase\\Interfaces\\IUserRepositorie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T00:44:26.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserRepositorie.cs",
-              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.DataBase\\Repositories\\UserRepositorie.cs",
-              "RelativeDocumentMoniker": "Backend.DataBase\\Repositories\\UserRepositorie.cs",
-              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.DataBase\\Repositories\\UserRepositorie.cs",
-              "RelativeToolTip": "Backend.DataBase\\Repositories\\UserRepositorie.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowC0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T00:39:23.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HealthCore.cs",
-              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Core\\Core\\HealthCore.cs",
-              "RelativeDocumentMoniker": "Backend.Core\\Core\\HealthCore.cs",
-              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Core\\Core\\HealthCore.cs",
-              "RelativeToolTip": "Backend.Core\\Core\\HealthCore.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T00:12:10.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "Backend.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Api\\appsettings.json",
-              "RelativeToolTip": "Backend.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-27T00:10:52.165Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UsersCore.cs",
-              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Core\\Core\\UsersCore.cs",
-              "RelativeDocumentMoniker": "Backend.Core\\Core\\UsersCore.cs",
-              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Core\\Core\\UsersCore.cs",
-              "RelativeToolTip": "Backend.Core\\Core\\UsersCore.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowDYAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T00:03:17.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Api\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Backend.Api\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Api\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Backend.Api\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAwwEkAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T00:01:42.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Api\\Program.cs",
               "RelativeDocumentMoniker": "Backend.Api\\Program.cs",
               "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Api\\Program.cs",
               "RelativeToolTip": "Backend.Api\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAwCcAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T23:59:44.483Z"
+              "WhenOpened": "2026-02-28T15:50:45.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IAuthCore.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Core\\Core\\Interfaces\\IAuthCore.cs",
+              "RelativeDocumentMoniker": "Backend.Core\\Core\\Interfaces\\IAuthCore.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Core\\Core\\Interfaces\\IAuthCore.cs",
+              "RelativeToolTip": "Backend.Core\\Core\\Interfaces\\IAuthCore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T15:45:23.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthCore.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Core\\Core\\AuthCore.cs",
+              "RelativeDocumentMoniker": "Backend.Core\\Core\\AuthCore.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Core\\Core\\AuthCore.cs",
+              "RelativeToolTip": "Backend.Core\\Core\\AuthCore.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwB0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T15:45:04.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Backend.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Api\\Controllers\\AuthController.cs*",
+              "RelativeToolTip": "Backend.Api\\Controllers\\AuthController.cs*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T15:43:50.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Domain\\Request\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "Backend.Domain\\Request\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Domain\\Request\\LoginRequest.cs",
+              "RelativeToolTip": "Backend.Domain\\Request\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T15:43:28.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserResponse.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Domain\\Response\\UserResponse.cs",
+              "RelativeDocumentMoniker": "Backend.Domain\\Response\\UserResponse.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Domain\\Response\\UserResponse.cs",
+              "RelativeToolTip": "Backend.Domain\\Response\\UserResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T15:34:16.515Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ExceptionMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "Backend.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "RelativeToolTip": "Backend.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBsAAAAEAAAAAAAAAA==",
+              "Title": "UserRepositorie.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.DataBase\\Repositories\\UserRepositorie.cs",
+              "RelativeDocumentMoniker": "Backend.DataBase\\Repositories\\UserRepositorie.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.DataBase\\Repositories\\UserRepositorie.cs",
+              "RelativeToolTip": "Backend.DataBase\\Repositories\\UserRepositorie.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAASwCoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T23:59:15.917Z"
+              "WhenOpened": "2026-02-28T15:29:44.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRequest.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Domain\\Request\\UserRequest.cs",
+              "RelativeDocumentMoniker": "Backend.Domain\\Request\\UserRequest.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Domain\\Request\\UserRequest.cs",
+              "RelativeToolTip": "Backend.Domain\\Request\\UserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T15:28:41.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Api\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Backend.Api\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-users\\Backend.Api\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Backend.Api\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAawCEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T00:01:42.721Z",
+              "EditorCaption": ""
             }
           ]
         }

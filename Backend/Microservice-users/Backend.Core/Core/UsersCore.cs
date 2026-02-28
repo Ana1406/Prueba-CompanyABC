@@ -22,9 +22,9 @@ namespace Backend.Core.Core
         /// Get user complete list
         /// </summary>
         /// <returns>List<UserDto> </returns>
-        public async Task<GeneralResponse> GetAllUsers(FilterUsersRequest input)
+        public async Task<GeneralResponse<List<UserResponse>>> GetAllUsers(FilterUsersRequest input)
         {
-            var oReturn = new GeneralResponse();
+            var oReturn = new GeneralResponse<List<UserResponse>> ();
 
             var usersList = await  _UserRepositorie.GetAllAsync( input);
 
@@ -43,25 +43,27 @@ namespace Backend.Core.Core
         /// </summary>
         /// <param name="input">UserDto</param>
         /// <returns> List<UserDto></returns>
-        public async Task<GeneralResponse> CreateUser(UserRequest userIn)
+        public async Task<GeneralResponse<string>> CreateUser(UserRequest userIn)
         {
-            var oReturn = new GeneralResponse();
+            var oReturn = new GeneralResponse<string>();
             var users = new List<UserModel>();
 
             var user = await _UserRepositorie.GetUserByEmailAsync(userIn.EmailIn);
 
             if (user == null)
             {
+               //Encriptacion o Hasheo de contraseña
+               userIn.Password = BCrypt.Net.BCrypt.HashPassword(userIn.Password);
                var userDb = await _UserRepositorie.CreateAsync(userIn);
 
-               oReturn.Data = true;
+               oReturn.Data = userDb;
                oReturn.Status = (int)ServiceStatusCode.Success;
                oReturn.Message = $"El usuario se creo exitosamente en el sistema, con el id {userDb}";
             }
             else
             {
               oReturn.Message = "El usuario ya se encuentra registrado en el sistema.";
-              oReturn.Data = false;
+              oReturn.Data = null;
               oReturn.Status = (int)ServiceStatusCode.ValidationError;
             }
             return oReturn;
@@ -73,9 +75,9 @@ namespace Backend.Core.Core
         /// Get userId by email
         /// </summary>
         /// <returns>List<UserDto> </returns>
-        public async Task<GeneralResponse> GetUserIdByEmail(string email)
+        public async Task<GeneralResponse<string>> GetUserIdByEmail(string email)
         {
-            var oReturn = new GeneralResponse();
+            var oReturn = new GeneralResponse<string>();
 
             var user = await _UserRepositorie.GetUserByEmailAsync(email);
 

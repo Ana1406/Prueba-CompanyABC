@@ -243,3 +243,9 @@ C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Bac
 C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-users\Backend.Api\obj\Debug\net8.0\Backend.Api.pdb
 C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-users\Backend.Api\obj\Debug\net8.0\Backend.Api.genruntimeconfig.cache
 C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-users\Backend.Api\obj\Debug\net8.0\ref\Backend.Api.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-users\Backend.Api\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-users\Backend.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-users\Backend.Api\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-users\Backend.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-users\Backend.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gr_98\OneDrive\Documentos\Prueba Tecnica Nexos Software\Company-ABC\Backend\Microservice-users\Backend.Api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

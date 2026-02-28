@@ -13,19 +13,19 @@ namespace Backend.Core.Core.Interfaces
         /// <summary>
         /// GetAllUsers
         /// </summary>
-        Task<GeneralResponse> GetAllUsers(FilterUsersRequest input);
+        Task<GeneralResponse<List<UserResponse>>> GetAllUsers(FilterUsersRequest input);
 
         /// <summary>
         /// CreateUser
         /// </summary>
         /// <param name="userIn">UserRequest</param>
-        Task<GeneralResponse> CreateUser(UserRequest userIn);
+        Task<GeneralResponse<string>> CreateUser(UserRequest userIn);
 
         /// <summary>
         /// Get userId by email
         /// </summary>
         /// <returns><UserDto> </returns>
-        Task<GeneralResponse> GetUserIdByEmail(string email);
+        Task<GeneralResponse<string>> GetUserIdByEmail(string email);
 
     }
 }

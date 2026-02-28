@@ -36,7 +36,10 @@ namespace Backend.DataBase.Repositories
                 .Project(user => new UserResponse
                 {
                     Name = user.Name,
-                    Email = user.Email
+                    Email = user.Email,
+                    Rol=user.Rol,
+                    CreatedDate=user.CreatedDate
+
                 })
                 .ToListAsync();
             return users;   
@@ -50,6 +53,8 @@ namespace Backend.DataBase.Repositories
                 Name = user.Name,
                 Email = user.EmailIn,
                 CreatedDate = DateTime.Now,
+                Password=user.Password,
+                Rol=user.Rol
             };
 
             await _collection.InsertOneAsync(userModel);

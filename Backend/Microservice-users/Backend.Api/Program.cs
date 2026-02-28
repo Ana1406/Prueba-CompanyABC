@@ -11,9 +11,13 @@ builder.Services.AddControllers();
 builder.Services.Configure<MongoSettings>(
     builder.Configuration.GetSection("MongoSettings"));
 builder.Services.AddSingleton<DbContext>();
+//Configuracion JWT
+builder.Services.Configure<JwtSettings>(
+    builder.Configuration.GetSection("Jwt"));
 // --- Add Scopes
 builder.Services.AddTransient<IUserRepositorie, UserRepositorie>();
 builder.Services.AddTransient<IUsersCore, UsersCore>();
+builder.Services.AddTransient<IAuthCore, AuthCore>();
 builder.Services.AddTransient<IHealthCore, HealthCore>();
 builder.Services.AddEndpointsApiExplorer();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

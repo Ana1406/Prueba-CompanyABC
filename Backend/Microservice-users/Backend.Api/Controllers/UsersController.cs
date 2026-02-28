@@ -21,7 +21,7 @@ namespace Backend.Api.Controllers
         /// </summary>
         /// <returns>List<UserResponse></returns>
         [HttpGet]
-        public async Task<ActionResult<GeneralResponse>> GetAllUsers([FromQuery] string? email,
+        public async Task<ActionResult<GeneralResponse<List<UserResponse>>>> GetAllUsers([FromQuery] string? email,
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 10)
         {
@@ -48,7 +48,7 @@ namespace Backend.Api.Controllers
         /// </summary>
         /// <returns><UserDto> </returns>
         [HttpGet]
-        public async Task<ActionResult<GeneralResponse>> GetUserIdByEmail([FromQuery] string? email)
+        public async Task<ActionResult<GeneralResponse<string>>> GetUserIdByEmail([FromQuery] string? email)
         {
            
             var result = await _userCore.GetUserIdByEmail(email);
@@ -69,7 +69,7 @@ namespace Backend.Api.Controllers
         /// <param name="userIn">UserRequest</param>
         /// <returns>bool</returns>
         [HttpPost]
-        public async Task<ActionResult<GeneralResponse>> CreateUser(UserRequest userIn)
+        public async Task<ActionResult<GeneralResponse<string>>> CreateUser(UserRequest userIn)
         {
             var result = await _userCore.CreateUser(userIn);
             if (result.Status == (int)ServiceStatusCode.Success)
