@@ -3,6 +3,7 @@ using Backend.Domain.Models;
 using Backend.Domain.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using static Backend.Domain.Models.Enums;
 
 namespace Backend.Api.Controllers
 {
@@ -25,7 +26,13 @@ namespace Backend.Api.Controllers
         public async Task<ActionResult<GeneralResponse<List<ProductResponse>>>> GetAllOrders()
         {
 
-            return Ok(await _orderCore.GetAllOrders());
+            var response = await _orderCore.GetAllOrders();
+            if (response.Status == (int)ServiceStatusCode.Success)
+                return Ok(response);
+            else
+            {
+                return BadRequest(response);
+            }
         }
 
         /// <summary>
@@ -36,7 +43,13 @@ namespace Backend.Api.Controllers
         public async Task<ActionResult<GeneralResponse<List<ProductResponse>>>> GetOrderByOrderId(string orderId)
         {
 
-            return Ok(await _orderCore.GetOrderByOrderId(orderId));
+            var response = await _orderCore.GetOrderByOrderId(orderId);
+            if (response.Status == (int)ServiceStatusCode.Success)
+                return Ok(response);
+            else
+            {
+                return BadRequest(response);
+            }
         }
 
 
@@ -49,7 +62,13 @@ namespace Backend.Api.Controllers
         public async Task<ActionResult<GeneralResponse<string>>> CreateOrder([FromBody] OrderRequest order)
         {
 
-            return Ok(await _orderCore.CreateOrder(order));
+            var response = await _orderCore.CreateOrder(order);
+            if (response.Status == (int)ServiceStatusCode.Success)
+                return Ok(response);
+            else
+            {
+                return BadRequest(response);
+            }
         }
 
         /// <summary>
@@ -61,7 +80,13 @@ namespace Backend.Api.Controllers
         public async Task<ActionResult<GeneralResponse<bool>>> EditOrder([FromBody] OrderRequest order)
         {
 
-            return Ok(await _orderCore.EditOrder(order));
+            var response = await _orderCore.EditOrder(order);
+            if (response.Status == (int)ServiceStatusCode.Success)
+                return Ok(response);
+            else
+            {
+                return BadRequest(response);
+            }
         }
 
         /// <summary>
@@ -73,7 +98,13 @@ namespace Backend.Api.Controllers
         public async Task<ActionResult<GeneralResponse<string>>> DeleteOrder([FromBody] DeleteOrderRequest orderId)
         {
 
-            return Ok(await _orderCore.DeleteOrder(orderId.IdOrder));
+            var response = await _orderCore.DeleteOrder(orderId.IdOrder);
+            if (response.Status == (int)ServiceStatusCode.Success)
+                return Ok(response);
+            else
+            {
+                return BadRequest(response);
+            }
         }
     }
 }

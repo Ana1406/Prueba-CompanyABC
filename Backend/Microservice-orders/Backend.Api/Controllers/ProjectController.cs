@@ -3,6 +3,7 @@ using Backend.Core.Core.Interfaces;
 using Backend.Domain.Models;
 using Backend.Domain.Response;
 using Microsoft.AspNetCore.Mvc;
+using static Backend.Domain.Models.Enums;
 
 namespace Backend.Api.Controllers
 {
@@ -24,7 +25,13 @@ namespace Backend.Api.Controllers
         public async Task<ActionResult<GeneralResponse<HealthResponse>>> Health()
         {
 
-            return Ok( await _healthCore.HealthAsync());
+            var response = await _healthCore.HealthAsync();
+            if (response.Status == (int)ServiceStatusCode.Success)
+                return Ok(response);
+            else
+            {
+                return BadRequest(response);
+            }
         }
 
         /// <summary>
@@ -36,7 +43,13 @@ namespace Backend.Api.Controllers
         public async Task<ActionResult<GeneralResponse<HealthResponse>>> Status()
         {
 
-            return Ok( await _healthCore.StatusAsync());
+            var response = await _healthCore.StatusAsync();
+            if (response.Status == (int)ServiceStatusCode.Success)
+                return Ok(response);
+            else
+            {
+                return BadRequest(response);
+            }
         }
     }
 }

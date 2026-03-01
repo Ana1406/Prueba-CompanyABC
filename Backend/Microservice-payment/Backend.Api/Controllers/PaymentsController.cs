@@ -3,6 +3,7 @@ using Backend.Domain.Models;
 using Backend.Domain.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using static Backend.Domain.Models.Enums;
 
 namespace Backend.Api.Controllers
 {
@@ -14,7 +15,7 @@ namespace Backend.Api.Controllers
         public readonly IPaymentCore _paymentCore;
         public PaymentsController(IPaymentCore paymentCore)
         {
-            _paymentCore=paymentCore;
+            _paymentCore = paymentCore;
         }
 
         /// <summary>
@@ -24,8 +25,13 @@ namespace Backend.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<GeneralResponse<PaymentResponse>>> GetPaymentByOrderId(string orderId)
         {
-
-            return Ok(await _paymentCore.GetPaymentByOrderId(orderId));
+            var response = await _paymentCore.GetPaymentByOrderId(orderId);
+            if (response.Status == (int)ServiceStatusCode.Success)
+                return Ok(response);
+            else
+            {
+                return BadRequest(response);
+            }
         }
 
         /// <summary>
@@ -35,8 +41,13 @@ namespace Backend.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<GeneralResponse<List<PaymentResponse>>>> GetAllPayment()
         {
-
-            return Ok(await _paymentCore.GetAllPayments());
+            var response = await _paymentCore.GetAllPayments();
+            if (response.Status == (int)ServiceStatusCode.Success)
+                return Ok(response);
+            else
+            {
+                return BadRequest(response);
+            }
         }
 
         /// <summary>
@@ -47,7 +58,13 @@ namespace Backend.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<GeneralResponse<bool>>> CreatePayment(PaymentRequest payment)
         {
-            return Ok(await _paymentCore.CreatePayment(payment));
+            var response = await _paymentCore.CreatePayment(payment);
+            if (response.Status == (int)ServiceStatusCode.Success)
+                return Ok(response);
+            else
+            {
+                return BadRequest(response);
+            }
         }
 
         /// <summary>
@@ -58,7 +75,16 @@ namespace Backend.Api.Controllers
         [HttpPut]
         public async Task<ActionResult<GeneralResponse<bool>>> UpdatePayment(string idPayment)
         {
-            return Ok(await _paymentCore.UpdateStatusPayment(idPayment));
+            var response = await _paymentCore.UpdateStatusPayment(idPayment);
+            if (response.Status == (int)ServiceStatusCode.Success)
+                return Ok(response);
+            else
+            {
+                return BadRequest(response);
+            }
         }
+
     }
 }
+            
+
