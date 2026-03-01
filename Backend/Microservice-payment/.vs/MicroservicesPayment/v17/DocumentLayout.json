@@ -38,7 +38,7 @@
               "RelativeDocumentMoniker": "Backend.Api\\Controllers\\ProjectController.cs",
               "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\Microservice-payment\\Backend.Api\\Controllers\\ProjectController.cs",
               "RelativeToolTip": "Backend.Api\\Controllers\\ProjectController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAkwDMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAiwDMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-01T05:53:11.86Z",
               "EditorCaption": ""
@@ -53,8 +53,7 @@
               "RelativeToolTip": "Backend.Api\\Controllers\\PaymentsController.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAAwFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T18:55:08.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T18:55:08.207Z"
             }
           ]
         }

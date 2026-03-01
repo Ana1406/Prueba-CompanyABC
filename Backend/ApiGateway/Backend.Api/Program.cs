@@ -23,12 +23,13 @@ builder.Services.AddAuthentication("Bearer")
                 Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:Key"]!))
         };
     });
+    var allowedOrigin = builder.Configuration["FRONTEND_URL"];
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
         policy =>
         {
-            policy.WithOrigins("http://localhost:4200")
+            policy.WithOrigins(allowedOrigin!)
                   .AllowAnyMethod()
                   .AllowAnyHeader();
         });
