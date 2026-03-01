@@ -32,9 +32,10 @@
               "RelativeDocumentMoniker": "Backend.Api\\Program.cs",
               "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\ApiGateway\\Backend.Api\\Program.cs",
               "RelativeToolTip": "Backend.Api\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACgAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T17:29:18.688Z"
+              "WhenOpened": "2026-02-28T17:29:18.688Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -42,9 +43,9 @@
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\ApiGateway\\Backend.Api\\appsettings.json",
               "RelativeDocumentMoniker": "Backend.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\ApiGateway\\Backend.Api\\appsettings.json",
-              "RelativeToolTip": "Backend.Api\\appsettings.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\gr_98\\OneDrive\\Documentos\\Prueba Tecnica Nexos Software\\Company-ABC\\Backend\\ApiGateway\\Backend.Api\\appsettings.json*",
+              "RelativeToolTip": "Backend.Api\\appsettings.json*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAwwBoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-02-28T17:23:36.187Z",
               "EditorCaption": ""

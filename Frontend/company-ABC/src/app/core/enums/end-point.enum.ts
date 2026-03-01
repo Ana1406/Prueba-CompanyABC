@@ -12,7 +12,8 @@ export enum EndPointRoute {
   DELETE_ORDER = 'Orders/DeleteOrder',
 
   //Microservice products
-  GET_ALL_PAYMENTS = 'products',
+  GET_ALL_PAYMENTS = 'Payments/GetAllPayment',
+  UPDATE_PAYMENT = 'Payments/UpdatePayment',
 
 
 }

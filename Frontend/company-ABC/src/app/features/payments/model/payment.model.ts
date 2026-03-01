@@ -1,6 +1,8 @@
 export interface Payment {
-    id: number;
-    title: string;
-    price: number;
-    image: string;
+    idPayment: string;
+    nameOwner: string;
+    products: string[];
+    totalPrice: number;
+    email: string;
+    status: boolean;
 }

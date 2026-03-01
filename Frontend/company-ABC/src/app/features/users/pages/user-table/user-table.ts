@@ -1,7 +1,6 @@
 import { ChangeDetectorRef, Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserService } from '../../services/user-service';
-import { PhonePipe } from '../../../../core/pipes/phone-pipe';
 import { FilterUser, Users } from '../../models/users.model';
 import { ApiResponse } from '../../../../core/models/api-response.interface';
 import { CustomButton } from '../../../../shared/components/forms-components/custom-button/custom-button';
@@ -12,7 +11,7 @@ import { ModalCreate } from '../modal-create/modal-create';
 
 @Component({
   selector: 'app-user-table',
-  imports: [CommonModule, PhonePipe, CustomInput, CustomButton, ReactiveFormsModule, Paginator, ModalCreate],
+  imports: [CommonModule, CustomInput, CustomButton, ReactiveFormsModule, Paginator, ModalCreate],
   templateUrl: './user-table.html',
   styleUrl: './user-table.css',
 })

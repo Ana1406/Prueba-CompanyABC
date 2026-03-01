@@ -93,6 +93,44 @@
         }
       }
     },
+    "/api/Orders/GetOrderByOrderId": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductResponseListGeneralResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductResponseListGeneralResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductResponseListGeneralResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Orders/CreateOrder": {
       "post": {
         "tags": [
@@ -356,6 +394,9 @@
               "type": "string"
             },
             "nullable": true
+          },
+          "enabled": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

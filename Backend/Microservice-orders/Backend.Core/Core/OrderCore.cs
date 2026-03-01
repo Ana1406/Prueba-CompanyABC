@@ -37,6 +37,25 @@ namespace Backend.Core.Core
         }
         #endregion
 
+        #region Get order by order id
+        /// <summary>
+        /// Get order by order id
+        /// </summary>
+        /// <returns>List<UserDto> </returns>
+       public async Task<GeneralResponse<ProductResponse>> GetOrderByOrderId(string orderId)
+        {
+            var oReturn = new GeneralResponse<ProductResponse>();
+
+            var order = await _OrderRepositorie.GetOrderByIdOrderAsync(orderId);
+
+            oReturn.Data = order;
+            oReturn.Status = (int)ServiceStatusCode.Success;
+            oReturn.Message = $"Se encontraron el registro  en el sistema.";
+
+            return oReturn;
+        }
+        #endregion
+
         #region Create Order
         /// <summary>
         /// Create Order

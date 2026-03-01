@@ -308,6 +308,10 @@
             "type": "string",
             "nullable": true
           },
+          "idOrder": {
+            "type": "string",
+            "nullable": true
+          },
           "nameOwner": {
             "type": "string",
             "nullable": true

@@ -42,5 +42,9 @@ app.UseCors("AllowFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapReverseProxy();
-
+app.Use(async (context, next) =>
+{
+    Console.WriteLine("GATEWAY HEADER: " + context.Request.Headers["Authorization"]);
+    await next();
+});
 app.Run();

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PaymentService } from '../../services/payment-service';
 import { Payment } from '../../model/payment.model';
 import { CustomButton } from '../../../../shared/components/forms-components/custom-button/custom-button';
+import { ApiResponse } from '../../../../core/models/api-response.interface';
 
 @Component({
   selector: 'app-payments-table',
@@ -15,7 +16,7 @@ export class PaymentsTable implements OnInit {
 
   private cdr: ChangeDetectorRef = inject(ChangeDetectorRef);
   private paymentService = inject(PaymentService);
-
+  message = signal('');
   selectedPaymentSignal: WritableSignal<Payment | null> = signal(null);
   isModalOpen: WritableSignal<boolean> = signal(false);
   modalVariant: WritableSignal<'order' | 'payment'> = signal('payment');
@@ -26,8 +27,8 @@ export class PaymentsTable implements OnInit {
 
   getPayments() {
     this.paymentService.getPayments().subscribe({
-      next: (response: Payment[]) => {
-        this.paymentsList = response;
+      next: (response: ApiResponse<Payment[]>) => {
+        this.paymentsList = response.data;
         this.cdr.detectChanges();
       },
       error: (err) => {
@@ -37,15 +38,23 @@ export class PaymentsTable implements OnInit {
     });
   }
 
-  openImage(payment: Payment) {
-    this.selectedPaymentSignal.set(payment);
-    this.modalVariant.set('payment');
-    this.isModalOpen.set(true);
-  }
+  updatePayment(idPayment: string) {
+    setTimeout(() => {
+      this.message.set('Realizando pago...');
+    }, 2000);
+    this.paymentService.updatePayment(idPayment).subscribe({
+      next: (response: ApiResponse<Payment[]>) => {
 
-  closeModal() {
-    this.isModalOpen.set(false);
-    this.selectedPaymentSignal.set(null);
+        setTimeout(() => {
+          this.message.set('Pago realizado con éxito');
+        }, 2000);
+        this.getPayments();
+        this.message.set('');
+      },
+      error: (error) => {
+        this.message.set(error.error.message);
+      }
+    });
   }
-
 }
+

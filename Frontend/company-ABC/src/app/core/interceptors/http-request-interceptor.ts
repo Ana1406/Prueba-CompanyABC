@@ -6,7 +6,7 @@ export const CompanyABCInterceptor: HttpInterceptorFn = (req, next) => {
     const authToken = sessionStorage.getItem(SessionStorageItems.TOKEN);
     const authReq = req.clone({
         setHeaders: {
-            Authorization: `${authToken}`,
+            Authorization: `Bearer  ${authToken}`,
         },
     });
     return next(authReq).pipe(

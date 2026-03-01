@@ -16,6 +16,11 @@ namespace Backend.Core.Core.Interfaces
         Task<GeneralResponse<List<ProductResponse>>> GetAllOrders();
 
         /// <summary>
+        /// GetOrderByOrderId
+        /// </summary>
+        Task<GeneralResponse<ProductResponse>> GetOrderByOrderId(string orderId);
+
+        /// <summary>
         /// Create Order
         /// </summary>
         /// <param name="userIn">OrderRequest</param>

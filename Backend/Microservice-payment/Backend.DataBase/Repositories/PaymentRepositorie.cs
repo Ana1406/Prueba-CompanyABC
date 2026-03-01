@@ -20,6 +20,7 @@ namespace Backend.DataBase.Repositories
             {
                 IdPayment=payment.IdPayment,
                 NameOwner = payment.NameOwner,
+                IdOrder=payment.IdOrder,
                 Products = payment.Products,
                 TotalPrice = payment.TotalPrice,
                 Email=payment.EmailOwner,

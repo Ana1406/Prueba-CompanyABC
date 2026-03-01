@@ -11,10 +11,12 @@ namespace Backend.Core.Core
     public class PaymentCore : IPaymentCore
     {
         private readonly IPaymentRepositorie _PaymentRepositorie;
+        private readonly IOrderServices _orderServices;
 
-        public PaymentCore(IPaymentRepositorie paymentRepositorie)
+        public PaymentCore(IPaymentRepositorie paymentRepositorie, IOrderServices orderServices)
         {
             _PaymentRepositorie = paymentRepositorie;
+            _orderServices = orderServices;
         }
         #region Get all payments
         /// <summary>
@@ -25,9 +27,21 @@ namespace Backend.Core.Core
         {
             var oReturn = new GeneralResponse<List<PaymentResponse>>();
 
-                var paymentsList = await _PaymentRepositorie.GetAllAsync();
 
-                oReturn.Data = paymentsList;
+            var paymentsList = await _PaymentRepositorie.GetAllAsync();
+
+            var filteredList = new List<PaymentResponse>();
+
+            foreach (var item in paymentsList)
+            {
+                var order = await _orderServices.GetOrderByOrderId(item.IdOrder);
+
+                if (order != null && order.Enabled)
+                {
+                    filteredList.Add(item);
+                }
+            }
+            oReturn.Data = filteredList;
                 oReturn.Status = (int)ServiceStatusCode.Success;
                 oReturn.Message = $"Se encontraron {paymentsList.Count} registros de pagos en el sistema.";
 

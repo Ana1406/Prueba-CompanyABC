@@ -66,9 +66,9 @@ namespace Backend.Core.Core
                 new Claim("Name", user.Name),
                 new Claim("Rol", user.Rol)
             };
-            var key = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(_configuration["Jwt:Key"])
-                    );
+            var keyBytes = Convert.FromBase64String(_configuration["Jwt:Key"]);
+
+            var key = new SymmetricSecurityKey(keyBytes);
 
             var credentials = new SigningCredentials(
                 key,

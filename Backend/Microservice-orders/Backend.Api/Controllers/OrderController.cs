@@ -1,12 +1,14 @@
 ﻿using Backend.Core.Core.Interfaces;
 using Backend.Domain.Models;
 using Backend.Domain.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Api.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Authorize]
     public class OrdersController : ControllerBase
     {
         public readonly IOrderCore _orderCore;
@@ -25,6 +27,18 @@ namespace Backend.Api.Controllers
 
             return Ok(await _orderCore.GetAllOrders());
         }
+
+        /// <summary>
+        /// GetOrderByOrderId
+        /// </summary>
+        /// <returns>List<OrderResponse></returns>
+        [HttpGet]
+        public async Task<ActionResult<GeneralResponse<List<ProductResponse>>>> GetOrderByOrderId(string orderId)
+        {
+
+            return Ok(await _orderCore.GetOrderByOrderId(orderId));
+        }
+
 
         /// <summary>
         /// CreateOrder

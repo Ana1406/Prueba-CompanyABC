@@ -79,5 +79,18 @@ namespace Backend.DataBase.Repositories
             return await _collection.Find(u => u.IdUser == idUser)
         .FirstOrDefaultAsync();
         }
+
+        public async Task<ProductResponse> GetOrderByIdOrderAsync(string IdOrder)
+        {
+            return await _collection.Find(u => u.IdOrder == IdOrder).Project(order => new ProductResponse
+            {
+                IdOrder = order.IdOrder,
+                Products = order.Products,
+                IdUser = order.IdUser,
+                NameApplicant = order.NameApplicant,
+                EmailApplicant = order.EmailApplicant,
+                Enabled=order.Enabled
+            }).FirstOrDefaultAsync();
+        }
     }
 }

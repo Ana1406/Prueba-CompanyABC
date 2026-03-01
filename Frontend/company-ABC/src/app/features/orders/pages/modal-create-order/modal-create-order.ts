@@ -3,7 +3,6 @@ import { ReactiveFormsModule, FormGroup, FormControl, Validators, FormArray } fr
 import { Items } from '../../../../core/models/catalog.interface';
 import { CustomButton } from '../../../../shared/components/forms-components/custom-button/custom-button';
 import { CustomInput } from '../../../../shared/components/forms-components/custom-input/custom-input';
-import { CustomSelect } from '../../../../shared/components/forms-components/custom-select/custom-select';
 import { SessionStorageItems } from '../../../../core/enums/session-storage.enum';
 import { CommonModule } from '@angular/common';
 import { OrderService } from '../../services/order-service';
@@ -12,7 +11,7 @@ import { ApiResponse } from '../../../../core/models/api-response.interface';
 
 @Component({
   selector: 'app-modal-create-order',
-  imports: [CustomButton, CustomInput, ReactiveFormsModule, CustomSelect, CommonModule],
+  imports: [CustomButton, CustomInput, ReactiveFormsModule, CommonModule],
   templateUrl: './modal-create-order.html',
   styleUrl: './modal-create-order.css',
 })

@@ -2,6 +2,8 @@ using Backend.Core.Core;
 using Backend.Core.Core.Interfaces;
 using Backend.DataBase.DataBase;
 using Backend.DataBase.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,33 @@ builder.Services.AddSingleton<DbContext>();
 //Configuracion JWT
 builder.Services.Configure<JwtSettings>(
     builder.Configuration.GetSection("Jwt"));
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        var key = Convert.FromBase64String(builder.Configuration["Jwt:Key"]!);
+
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+
+            ValidIssuer = "AuthService",
+            ValidAudience = "Microservices",
+            IssuerSigningKey = new SymmetricSecurityKey(key)
+        };
+
+        options.Events = new JwtBearerEvents
+        {
+            OnAuthenticationFailed = context =>
+            {
+                Console.WriteLine("TOKEN ERROR: " + context.Exception.Message);
+                return Task.CompletedTask;
+            }
+        };
+    });
 // --- Add Scopes
 builder.Services.AddTransient<IUserRepositorie, UserRepositorie>();
 builder.Services.AddTransient<IUsersCore, UsersCore>();
@@ -40,7 +69,8 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 app.UseRouting();
-app.UseAuthorization();
+app.UseAuthentication();
+app.UseAuthorization(); 
 app.UseMiddleware<ExceptionMiddleware>();
 app.MapControllers();   
 app.Run();

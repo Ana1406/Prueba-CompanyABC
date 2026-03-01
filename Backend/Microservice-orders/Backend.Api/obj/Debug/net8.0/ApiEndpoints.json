@@ -98,6 +98,32 @@
     ]
   },
   {
+    "ContainingType": "Backend.Api.Controllers.OrdersController",
+    "Method": "GetOrderByOrderId",
+    "RelativePath": "api/Orders/GetOrderByOrderId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Backend.Domain.Response.GeneralResponse\u00601[[System.Collections.Generic.List\u00601[[Backend.Domain.Models.ProductResponse, Backend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Backend.Api.Controllers.HealthController",
     "Method": "Health",
     "RelativePath": "health",

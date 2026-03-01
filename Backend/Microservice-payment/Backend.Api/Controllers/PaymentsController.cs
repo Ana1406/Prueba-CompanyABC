@@ -1,12 +1,14 @@
 ﻿using Backend.Core.Core.Interfaces;
 using Backend.Domain.Models;
 using Backend.Domain.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Api.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Authorize]
     public class PaymentsController : ControllerBase
     {
         public readonly IPaymentCore _paymentCore;

@@ -7,14 +7,17 @@
         @if(paymentsList && paymentsList.length){
         <div>
             <ul class="payments-list">
-                @for(p of paymentsList; track p.id){
+                @for(p of paymentsList; track p.idPayment){
                 <li class="payment-item ">
                     <div class="payment-info">
-                        <div class="payment-title">{{ p.title }}</div>
-                        <div class="payment-price">Precio: {{ p.price |currency }}</div>
+                        <div class="payment-title">{{ p.nameOwner }}</div>
+                        <div class="payment-title">{{ p.products }}</div>
+                        <div class="payment-price">Precio: {{ p.totalPrice |currency }}</div>
+                        <div class="payment-title">{{ p.status ? 'Pagado' : 'Pendiente' }}</div>
                     </div>
                     <div>
-                        <app-custom-button text="Ver imagen" color="primary" (click)="openImage(p)"></app-custom-button>
+                        <app-custom-button text="Realizar Pago" color="primary"
+                            (click)="updatePayment(p.idPayment)"></app-custom-button>
                     </div>
                 </li>
                 }

@@ -11,6 +11,7 @@ namespace Backend.DataBase.Repositories
         Task<string> CreateAsync(OrderRequest user);
         Task<string> UpdateAsync(OrderRequest user);
         Task<OrderModel> GetOrderByIdAsync(string idUser);
+        Task<ProductResponse> GetOrderByIdOrderAsync(string IdOrder);
         Task<string> DisabledOrderByIdAsync(string orderId);
 
     }

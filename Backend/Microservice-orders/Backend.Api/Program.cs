@@ -2,8 +2,11 @@ using Backend.Core.Core;
 using Backend.Core.Core.Interfaces;
 using Backend.DataBase.DataBase;
 using Backend.DataBase.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -14,6 +17,36 @@ builder.Services.Configure<MongoSettings>(
 builder.Services.AddSingleton<DbContext>();
 builder.Services.Configure<PaymentServiceSettings>(
     builder.Configuration.GetSection("PaymentService"));
+builder.Services.Configure<JwtSettings>(
+    builder.Configuration.GetSection("Jwt"));
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        var key = Convert.FromBase64String(builder.Configuration["Jwt:Key"]!);
+
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+
+            ValidIssuer = "AuthService",
+            ValidAudience = "Microservices",
+            IssuerSigningKey = new SymmetricSecurityKey(key)
+        };
+
+        options.Events = new JwtBearerEvents
+        {
+            OnAuthenticationFailed = context =>
+            {
+                Console.WriteLine("TOKEN ERROR: " + context.Exception.Message);
+                return Task.CompletedTask;
+            }
+        };
+    });
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddHttpClient<IPaymentServices, PaymentServices>()
     .ConfigureHttpClient((serviceProvider, client) =>
     {
@@ -43,10 +76,16 @@ var app = builder.Build();
     app.UseSwagger();
     app.UseSwaggerUI();
 
-
+app.Use(async (context, next) =>
+{
+    Console.WriteLine("AUTH HEADER: " + context.Request.Headers["Authorization"]);
+    await next();
+});
 app.UseHttpsRedirection();
 app.UseRouting();
-app.UseAuthorization();
+app.UseAuthentication();
+app.UseAuthorization(); ;
 app.UseMiddleware<ExceptionMiddleware>();
 app.MapControllers();   
+
 app.Run();
