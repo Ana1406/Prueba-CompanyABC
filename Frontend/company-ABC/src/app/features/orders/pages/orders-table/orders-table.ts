@@ -1,22 +1,22 @@
 import { ChangeDetectorRef, Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Order } from '../../models/order.model';
+import { DeleteOrder, Order } from '../../models/order.model';
 import { OrderService } from '../../services/order-service';
-import { ModalComment } from '../../../../shared/components/modal-comment/modal-comment';
 import { CustomButton } from '../../../../shared/components/forms-components/custom-button/custom-button';
+import { ApiResponse } from '../../../../core/models/api-response.interface';
+import { ModalCreateOrder } from '../modal-create-order/modal-create-order';
 
 @Component({
   selector: 'app-orders-table',
-  imports: [CommonModule, ModalComment, CustomButton],
+  imports: [CommonModule, CustomButton, ModalCreateOrder],
   templateUrl: './orders-table.html',
   styleUrl: './orders-table.css',
 })
 export class OrdersTable implements OnInit {
   orders: Order[] = [];
-  selectedOrderSignal: WritableSignal<Order | null> = signal(null);
+  orderSelect: Order | null = null;
   isModalOpen: WritableSignal<boolean> = signal(false);
-  modalVariant: WritableSignal<'order' | 'payment'> = signal('order');
-
+  message = signal('');
   private orderService = inject(OrderService);
   private cdr = inject(ChangeDetectorRef);
 
@@ -26,9 +26,8 @@ export class OrdersTable implements OnInit {
 
   getOrders() {
     this.orderService.getOrders().subscribe({
-      next: (response: Order[]) => {
-        this.orders = response,
-          this.orders = response;
+      next: (response: ApiResponse<Order[]>) => {
+        this.orders = response.data;
         this.cdr.detectChanges();
       },
       error: (err) => {
@@ -37,15 +36,34 @@ export class OrdersTable implements OnInit {
       }
     });
   }
+  deleteOrder(idOrder: string) {
+    const payload: DeleteOrder = { idOrder: idOrder }
+    this.orderService.DeleteOrder(payload).subscribe({
+      next: (response: ApiResponse<string>) => {
+        if (response.status === 200) {
+          this.getOrders();
+        } else {
+          this.message.set(response.message);
+        }
 
-  openComment(order: Order) {
-    this.selectedOrderSignal.set(order);
-    this.modalVariant.set('order');
+      },
+      error: (error) => {
+        this.message.set(error.error.message);
+      }
+    });
+  }
+
+  openModal(order?: Order) {
+    if (order) {
+      this.orderSelect = order;
+    }
+    console.log('Selected order for editing:', this.orderSelect);
     this.isModalOpen.set(true);
   }
 
   closeModal() {
     this.isModalOpen.set(false);
-    this.selectedOrderSignal.set(null);
+    this.orderSelect = null as any;
+    this.getOrders();
   }
 }

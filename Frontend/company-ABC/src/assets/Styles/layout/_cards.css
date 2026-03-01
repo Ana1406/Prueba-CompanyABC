@@ -1,38 +1,89 @@
-.cards {
-    display: none;
-    gap: 12px;
+.orders-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
 }
 
-.card {
+.orders-modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.orders-modal__dialog {
+    position: relative;
+    max-width: 740px;
+    width: 90%;
     background: var(--color-table);
     border-radius: 8px;
-    padding: 12px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
-    margin-bottom: 12px;
+    padding: 18px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+    z-index: 1201;
 }
 
-.card__row {
+.orders-modal__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: var(--input-text);
+    margin-bottom: 12px;
 }
 
-.card__email {
-    margin-top: 8px;
-    color: var(--color-black);
-    font-size: 13px;
+.orders-modal__body {
+    max-height: 60vh;
+    overflow: auto;
+    color: var(--input-text);
+    text-align: center;
 }
 
-.card__actions {
-    margin-top: 10px;
+.orders-modal__footer {
+    margin-top: 12px;
+    text-align: right;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 0 !important;
+    min-width: auto !important;
+    height: auto !important;
+}
+
+.alert {
     display: flex;
-    gap: 8px;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    color: #155724;
+    font-weight: 500;
+
+    i {
+        font-size: 20px;
+    }
 }
 
-/* Responsive: switch to cards on small screens */
-@media (max-width: 768px) {
+.danger {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    background-color: #edd4d4;
+    border: 1px solid #e6c3c6;
+    border-radius: 8px;
+    color: #571515;
+    font-weight: 500;
 
-    .cards {
-        display: block;
+    i {
+        font-size: 20px;
     }
 }

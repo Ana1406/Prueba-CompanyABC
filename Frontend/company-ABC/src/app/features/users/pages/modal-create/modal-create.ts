@@ -44,9 +44,6 @@ export class ModalCreate {
     });
   }
 
-
-
-
   closeModal() {
     this.close.emit();
   }

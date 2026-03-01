@@ -2,12 +2,11 @@ import { ChangeDetectorRef, Component, inject, OnInit, signal, WritableSignal } 
 import { CommonModule } from '@angular/common';
 import { PaymentService } from '../../services/payment-service';
 import { Payment } from '../../model/payment.model';
-import { ModalComment } from '../../../../shared/components/modal-comment/modal-comment';
 import { CustomButton } from '../../../../shared/components/forms-components/custom-button/custom-button';
 
 @Component({
   selector: 'app-payments-table',
-  imports: [CommonModule, ModalComment, CustomButton],
+  imports: [CommonModule, CustomButton],
   templateUrl: './payments-table.html',
   styleUrl: './payments-table.css',
 })

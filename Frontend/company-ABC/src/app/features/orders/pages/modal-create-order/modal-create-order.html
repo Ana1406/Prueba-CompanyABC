@@ -1,0 +1,45 @@
+@if(isOpen()){
+<div class="orders-modal">
+    <div class="orders-modal__overlay" (click)="closeModal()"></div>
+    <div class="orders-modal__dialog">
+        <header class="orders-modal__header">
+            <h3>{{order ? 'Edición de pedido' : 'Creación de pedido'}}</h3>
+            <app-custom-button text="×" color="ghost" (click)="closeModal()" class="modal-close"></app-custom-button>
+        </header>
+        @if(message()!==''){
+        <div class="danger">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>
+                {{message()}}</span>
+        </div>
+        }
+        <div class="button__container"> <button type="button" (click)="addProduct()" class="button_add">Agregar
+                producto</button></div>
+        <form [formGroup]="createForm">
+
+            <app-custom-input formControlName="nameApplicant" [form]="createForm" label="Ingrese nombre del usuario"
+                id="nameApplicant" type="text" placeholder="Ejemplo: Juan Pérez">
+            </app-custom-input>
+
+            <app-custom-input formControlName="emailApplicant" [form]="createForm" label="Ingrese correo del usuario"
+                id="emailApplicant" type="email" placeholder="Ejemplo: juan@correo.com">
+            </app-custom-input>
+
+
+            <div formArrayName="products">
+                <div *ngFor="let productCtrl of products.controls; let i = index" class="product_add">
+                    <app-custom-input [form]="createForm" [formControlName]="i.toString()" label="Producto"
+                        id="product-{{i}}" type="text" placeholder="Ejemplo: Silla">
+                    </app-custom-input>
+                    <button type="button" class="button_delete" (click)="removeProduct(i)">Eliminar</button>
+
+                </div>
+
+            </div>
+            <app-custom-button [text]="order ? 'Editar Pedido' : 'Crear Pedido'" color="secondary"
+                (click)="order ? editOrder(createForm) : createOrder(createForm)"
+                [disabled]="createForm.invalid"></app-custom-button>
+        </form>
+    </div>
+</div>
+}

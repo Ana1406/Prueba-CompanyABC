@@ -54,6 +54,7 @@ namespace Backend.Core.Core
                         NameApplicant = orderIn.NameApplicant,
                         EmailApplicant = orderIn.EmailApplicant,
                         Products = orderIn.Products,
+                        IdOrder= orderIn.IdOrder,
                     });
             if (orderDb != null)
             {
@@ -80,12 +81,15 @@ namespace Backend.Core.Core
 
             //Logica para revisar estado de pago en microservicio de pago
             var payment = await _PaymentServices.GetPaymentByOrderId(orderIn.IdOrder);
-            if (!payment.Status) {
+            if (payment!=null && !payment.Status  ) {
                 var userDb = _OrderRepositorie.UpdateAsync(new OrderRequest()
                 {
                     NameApplicant = orderIn.NameApplicant,
                     EmailApplicant = orderIn.EmailApplicant,
                     Products = orderIn.Products,
+                    IdUser=orderIn.IdUser,
+                    IdOrder=orderIn.IdOrder
+
                 });
 
                 oReturn.Data = true;
@@ -95,7 +99,7 @@ namespace Backend.Core.Core
             }
 
             oReturn.Data = false;
-            oReturn.Status = (int)ServiceStatusCode.Success;
+            oReturn.Status = (int)ServiceStatusCode.ValidationError;
             oReturn.Message = "El pedido se ya se encuentra pagado. No es posible editar.";
             return oReturn;
 

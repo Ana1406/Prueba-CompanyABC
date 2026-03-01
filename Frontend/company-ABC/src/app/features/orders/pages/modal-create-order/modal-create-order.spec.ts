@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalComment } from './modal-comment';
+import { ModalCreateOrder } from './modal-create-order';
 
-describe('ModalComment', () => {
-  let component: ModalComment;
-  let fixture: ComponentFixture<ModalComment>;
+describe('ModalCreateOrder', () => {
+  let component: ModalCreateOrder;
+  let fixture: ComponentFixture<ModalCreateOrder>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ModalComment]
+      imports: [ModalCreateOrder]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ModalComment);
+    fixture = TestBed.createComponent(ModalCreateOrder);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

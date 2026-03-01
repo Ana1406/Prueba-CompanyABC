@@ -1,0 +1,33 @@
+@import './../../../../../assets/Styles/Constants/_colors.css';
+
+.product_add {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    flex-direction: row;
+}
+
+.button__container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.button_add {
+    background-color: var(--color-green);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 10px 20px;
+
+}
+
+.button_delete {
+    background-color: var(--color-red);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 10px 20px;
+}

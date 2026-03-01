@@ -4,29 +4,37 @@
             <h2 class="table__title">Lista de órdenes</h2>
             <p class="table__subtitle">Revisa los pedidos y abre comentarios</p>
         </div>
+        <app-custom-button text="Crear Pedido" color="ghost" (click)="openModal()"></app-custom-button>
     </header>
-
+    @if(message()!==''){
+    <div class="danger">
+        <i class="fa-solid fa-check-circle"></i>
+        <span>
+            {{message()}}</span>
+    </div>
+    }
     <section class="table__container">
         <div class="table__table-wrap">
             @if(orders && orders.length){
             <table class="table__table">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Correo</th>
-                        <th>Acción</th>
+                        <th>Numero del pedido</th>
+                        <th>Nombre de titular</th>
+                        <th>Productos</th>
+                        <th>Acciónes</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @for( o of orders;track o.id){
+                    @for( o of orders;track o.idOrder){
                     <tr>
-                        <td>{{ o.id }}</td>
-                        <td>{{ o.name }}</td>
-                        <td>{{ o.email }}</td>
-                        <td>
-                            <app-custom-button text="Detalle" color="secondary"
-                                (click)="openComment(o)"></app-custom-button>
+                        <td>{{ o.idOrder }}</td>
+                        <td>{{ o.nameApplicant }}</td>
+                        <td>{{ o.products.join(', ') }}</td>
+                        <td class="actions">
+                            <app-custom-button text="Editar" (click)="openModal(o)"></app-custom-button>
+                            <app-custom-button text="Eliminar" color="secondary"
+                                (click)="deleteOrder(o.idOrder)"></app-custom-button>
                         </td>
                     </tr>
                     }
@@ -41,17 +49,18 @@
         </div>
 
         <div class="cards">
-            @for(o of orders; track o.id){
+            @for(o of orders; track o.idOrder){
             <article class="card">
                 <div class="card__row">
                     <div>
-                        <div class="card__id">#{{ o.id }}</div>
-                        <div class="card__name">{{ o.name }}</div>
-                        <div class="card__email">{{ o.email }}</div>
+                        <div class="card__id">#{{ o.idOrder }}</div>
+                        <div class="card__name">{{ o.nameApplicant }}</div>
+                        <div class="card__email">{{ o.products }}</div>
                     </div>
                     <div>
-                        <app-custom-button text="Detalle" color="secondary"
-                            (click)="openComment(o)"></app-custom-button>
+                        <app-custom-button text="Editar" (click)="openModal(o)"></app-custom-button>
+                        <app-custom-button text="Eliminar" color="secondary"
+                            (click)="deleteOrder(o.idOrder)"></app-custom-button>
                     </div>
                 </div>
             </article>
@@ -60,7 +69,7 @@
     </section>
 
     <!-- Modal -->
-    <app-modal-comment [isOpen]="isModalOpen" [payload]="selectedOrderSignal" [variant]="modalVariant"
-        (close)="closeModal()"></app-modal-comment>
+    <app-modal-create-order [isOpen]="isModalOpen" (close)="closeModal()"
+        [order]="orderSelect"></app-modal-create-order>
 
 </div>

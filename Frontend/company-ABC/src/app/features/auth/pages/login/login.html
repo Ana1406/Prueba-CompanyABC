@@ -16,8 +16,7 @@
                     <p class="login__header-subtitle">Ingresa con tu cuenta</p>
                 </div>
                 @if(message()!==''){
-                <div class="login__success-alert"
-                    [ngClass]="{'login__success-alert': loginSuccessSignal(), 'login__success-danger' : !loginSuccessSignal()}">
+                <div class="alert" [ngClass]="{'alert': loginSuccessSignal(), 'danger' : !loginSuccessSignal()}">
                     <i class="fa-solid fa-check-circle"></i>
                     <span>
                         {{message()}}</span>

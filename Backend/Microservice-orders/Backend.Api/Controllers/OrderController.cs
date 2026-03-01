@@ -56,10 +56,10 @@ namespace Backend.Api.Controllers
         /// <param name="order">OrderId</param>
         /// <returns>bool</returns>
         [HttpPost]
-        public async Task<ActionResult<GeneralResponse<string>>> DeleteOrder([FromBody] string orderId)
+        public async Task<ActionResult<GeneralResponse<string>>> DeleteOrder([FromBody] DeleteOrderRequest orderId)
         {
 
-            return Ok(await _orderCore.DeleteOrder(orderId));
+            return Ok(await _orderCore.DeleteOrder(orderId.IdOrder));
         }
     }
 }

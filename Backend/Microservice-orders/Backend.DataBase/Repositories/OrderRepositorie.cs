@@ -1,5 +1,6 @@
 ﻿using Backend.DataBase.DataBase;
 using Backend.Domain.Models;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 
@@ -20,6 +21,7 @@ namespace Backend.DataBase.Repositories
             {
                 IdOrder=order.IdOrder,
                 Products = order.Products,
+                IdUser=order.IdUser,
                 NameApplicant = order.NameApplicant,
                 EmailApplicant = order.EmailApplicant,
             }).ToListAsync();
@@ -44,13 +46,18 @@ namespace Backend.DataBase.Repositories
         {
             var orderExits = Builders<OrderModel>.Filter.Eq(x => x.IdOrder, order.IdOrder);
 
-            var update = Builders<OrderModel>.Update
-                .Set(x => x.NameApplicant, order.NameApplicant)
-                .Set(x => x.EmailApplicant, order.EmailApplicant)
-                .Set(x => x.Products, order.Products);
-       
+            var updatedOrder = new OrderModel
+            {
+                IdOrder = order.IdOrder,
+                IdUser =order.IdUser,
+                NameApplicant = order.NameApplicant,
+                EmailApplicant = order.EmailApplicant,
+                Products = order.Products,
+                Enabled = true
+            };
 
-            await _collection.UpdateOneAsync(orderExits, update);
+
+            await _collection.ReplaceOneAsync(orderExits, updatedOrder);
 
             return order.IdOrder;
         }

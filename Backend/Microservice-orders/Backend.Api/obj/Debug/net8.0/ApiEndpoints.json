@@ -35,7 +35,7 @@
     "Parameters": [
       {
         "Name": "orderId",
-        "Type": "System.String",
+        "Type": "Backend.Domain.Models.DeleteOrderRequest",
         "IsRequired": true
       }
     ],
